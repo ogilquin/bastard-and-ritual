@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using XInputDotNetPure;
 
 public class PlayerSelectManager : MonoBehaviour {
-    
-    public int minPlayer = 4;
+	public int minPlayer = 4;
     public int maxPlayer = 4;
 
     private List<PlayerList> players = new List<PlayerList>();
@@ -62,14 +61,14 @@ public class PlayerSelectManager : MonoBehaviour {
         }
 	}
     
-    void AddPlayer(int number, PlayerIndex playerIndex, ControllerType controllerType)
+    public void AddPlayer(int number, PlayerIndex playerIndex, ControllerType controllerType)
     {
         Debug.Log("Add player : " + number + ", controller: " + playerIndex);
         players.Add(new PlayerList(number, playerIndex, controllerType));
         //UIManager.instance.Shake(50f, 10f, Vector2.zero);
     }
     
-    void StartGame(){
+    public void StartGame(){
         if(start == true) return;
         if(minPlayer > players.Count || GameManager.instance.inGame == true)
             return;
