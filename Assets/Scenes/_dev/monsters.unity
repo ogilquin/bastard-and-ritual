@@ -147,6 +147,90 @@ MonoBehaviour:
   goThrouhgSelect: 1
   goToPlay: 1
   numPlayers: 1
+--- !u!1 &258468625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 258468627}
+  - 114: {fileID: 258468626}
+  m_Layer: 0
+  m_Name: MonstersIA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &258468626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258468625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838951b67f685694cae894128796e602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &258468627
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258468625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!1 &390913095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 390913097}
+  - 114: {fileID: 390913096}
+  m_Layer: 0
+  m_Name: FloorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &390913096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390913095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b934ae15973c2d34ca3241aa531181fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numHittingMonsters: 1
+  numShootingMonsters: 0
+  monsters: []
+  MonsterSwordPrefab: {fileID: 11449722, guid: 46b1b11ea31c9994dac659ada9552bd6, type: 2}
+  MonsterCrossBowPrefab: {fileID: 11469800, guid: c4d609067e9711347bd763858aa28b57,
+    type: 2}
+--- !u!4 &390913097
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390913095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1001 &1340982691
 Prefab:
   m_ObjectHideFlags: 0
@@ -184,7 +268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 482610, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}

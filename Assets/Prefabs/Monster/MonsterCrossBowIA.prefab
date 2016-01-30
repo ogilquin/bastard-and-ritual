@@ -15,7 +15,6 @@ GameObject:
   - 114: {fileID: 11401950}
   - 58: {fileID: 5840748}
   - 50: {fileID: 5031400}
-  - 114: {fileID: 11431776}
   m_Layer: 0
   m_Name: MonsterCrossBowIA
   m_TagString: Untagged
@@ -103,18 +102,6 @@ MonoBehaviour:
     m_Bits: 4294967295
   _drawGizmos: 1
   _preAllocateSize: 30
---- !u!114 &11431776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d9c0241584e3941a12f0b17f9af1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTarget: {fileID: 0}
 --- !u!114 &11460404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,6 +181,23 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 30efb6eeafae8e74b89a7161a8b84d53,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 0.33088237
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: 0.2111808
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 0.031628452
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

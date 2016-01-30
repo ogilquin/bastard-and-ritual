@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAttack : MonoBehaviour {
-    public GameObject weaponHolder;
-
-    private Weapon weapon;
+public class PlayerAttack : Attack {
     private Skill skill;
 
     private Vector2 direction = new Vector2(1f, 1f);
@@ -61,18 +58,6 @@ public class PlayerAttack : MonoBehaviour {
         
 	}
 
-    public void EquipWeapon(Weapon _weapon)
-    {
-        if (weapon)
-            Destroy(weapon.gameObject);
-
-        weapon = Instantiate(_weapon) as Weapon;
-        weapon.transform.parent = weaponHolder.transform;
-        weapon.transform.localPosition = Vector3.zero;
-        weapon.transform.localRotation = new Quaternion();
-        weapon.life = player.GetLife();
-    }
-
     public void EquipSkill(Skill _skill)
     {
         if (skill)
@@ -90,13 +75,12 @@ public class PlayerAttack : MonoBehaviour {
         //EquipSkill(GameManager.instance.skills[Random.Range(0, GameManager.instance.skills.Length)]);
     }
 
-    public Weapon GetWeapon()
-    {
-        return weapon;
-    }
-
     public Skill GetSkill()
     {
         return skill;
     }
+
+	public override Life GetLife() {
+		return player.GetLife();
+	}
 }
