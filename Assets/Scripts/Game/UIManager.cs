@@ -74,8 +74,8 @@ public class UIManager : MonoBehaviour
             case State.PlayerSelection:
                 anim.SetBool("SelectPlayer", true);
                 break;
-
-            case State.Generation:
+                
+            case State.Loading:
                 anim.SetBool("Loading", true);
                 break;
 

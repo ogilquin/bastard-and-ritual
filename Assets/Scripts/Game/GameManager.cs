@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using XInputDotNetPure;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,11 +15,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Player playerPrefab;
+    public int floor = 0;
+    public bool inGame = false;
+    public List<Player> players = new List<Player>();
     private bool initGUI = true;
+    
+    void Awake()
+    {
+        if(instance != this)
+            Destroy(gameObject);
+            
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
-
+        
     }
     
     void OnGUI()
@@ -33,6 +43,17 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    public void LaunchGame(PlayerList[] playersList)
+    {
+        foreach (PlayerList playerList in playersList)
+        {
+            Player p = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity) as Player;
+            p.SetupPlayer(playerList);
+            players.Add(p);
+        }
+        
+        inGame = true;
+    }
     
     void Update()
     {
