@@ -250,6 +250,14 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 438244, guid: dd7b4a8dcb325d945b989740c3857e71, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 408150, guid: dd7b4a8dcb325d945b989740c3857e71, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd7b4a8dcb325d945b989740c3857e71, type: 2}
   m_IsPrefabParent: 0
@@ -304,6 +312,14 @@ Prefab:
       propertyPath: linkTo
       value: 
       objectReference: {fileID: 1998264285}
+    - target: {fileID: 408150, guid: dd7b4a8dcb325d945b989740c3857e71, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 438244, guid: dd7b4a8dcb325d945b989740c3857e71, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd7b4a8dcb325d945b989740c3857e71, type: 2}
   m_IsPrefabParent: 0

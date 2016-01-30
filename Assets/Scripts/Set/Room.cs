@@ -38,15 +38,16 @@ public class Room : MonoBehaviour {
                 wallLeft.size = new Vector2(1f, (float) height);
                 wallLeft.transform.localPosition = new Vector3((-(float)width)/2f, 0f, 0f);
             }
-            if(doorRight){
-                doorRight.transform.localPosition = new Vector3(((float)width)/2f, 0f, 0f);
+            if(wallRight){
+                wallRight.size = new Vector2(1f, (float) height);
+                wallRight.transform.localPosition = new Vector3(((float)width)/2f, 0f, 0f);
             }
             
             if(doorTop){
                 doorTop.transform.localPosition = new Vector3(0f, ((float)height)/2f - 1f, ((float)height)/2f - 1f);
             }
             if(doorBottom){
-                doorBottom.transform.localPosition = new Vector3(0f, (-(float)height)/2f + 0.5f, (-(float)height)/2f + 0.5f);
+                doorBottom.transform.localPosition = new Vector3(0f, (-(float)height)/2f + 0.5f, (-(float)height)/2f);
             }
             if(doorLeft){
                 doorLeft.transform.localPosition = new Vector3((-(float)width)/2f + 0.5f, 0f, 0f);
