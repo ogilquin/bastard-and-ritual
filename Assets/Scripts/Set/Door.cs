@@ -7,6 +7,7 @@ public class Door : MonoBehaviour {
     public Transform spawnPoint;
     private bool closed = false;
     private Animator anim;
+    private Room parent;
     
     void Awake()
     {
@@ -14,20 +15,18 @@ public class Door : MonoBehaviour {
             gameObject.SetActive(false);
 
         anim = gameObject.GetComponent<Animator>();
+        parent = gameObject.GetComponentInParent<Room>();
     }
     
     public void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("Door hit");
         if(closed == true)
             return;
             
         TakeDamage other = collider.gameObject.GetComponent<TakeDamage>();
-    }
-    
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, 1f);
-        if(linkTo)
-            Gizmos.DrawLine(transform.position, linkTo.transform.position);
+        
+        linkTo.GetRoom().Enter(linkTo);
+        parent.Exit();
     }
     
     public void Close()
@@ -40,5 +39,17 @@ public class Door : MonoBehaviour {
     {
         closed = false;
         anim.SetBool("Closed", false);
+    }
+    
+    public Room GetRoom()
+    {
+        return parent;
+    }
+    
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 1f);
+        if(linkTo)
+            Gizmos.DrawLine(transform.position, linkTo.transform.position);
     }
 }

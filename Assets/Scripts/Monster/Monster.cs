@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 using UnitySteer2D.Behaviors;
@@ -30,7 +30,7 @@ public class Monster : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+   
 	void Update () {
 		if (iaToFollow != null) {
 			transform.position = iaToFollow.transform.position;

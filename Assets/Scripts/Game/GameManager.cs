@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     }
 
     public Player playerPrefab;
+	public Monster monsterSwordPrefab;
+	public Monster monsterCrossBowPrefab;
     public Weapon[] weapons;
     public int floor = 0;
     public bool inGame = false;
