@@ -31,9 +31,6 @@ public class PlayerSelectManager : MonoBehaviour {
                     testable.Remove(testable[i]);
                     return;
                 }
-                
-                if(testState.Buttons.Start == ButtonState.Pressed)
-                    StartGame();
             }
         }
         
@@ -68,5 +65,6 @@ public class PlayerSelectManager : MonoBehaviour {
             
         Debug.Log("Launch game");
         GameManager.instance.LaunchGame(players.ToArray());
+        Destroy(gameObject);
     }
 }

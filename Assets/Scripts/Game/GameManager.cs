@@ -16,9 +16,11 @@ public class GameManager : MonoBehaviour
     }
 
     public Player playerPrefab;
+    public Weapon[] weapons;
     public int floor = 0;
     public bool inGame = false;
     public List<Player> players = new List<Player>();
+    public CameraRoom cam;
     private bool initGUI = true;
     
     void Awake()
@@ -31,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        cam = Camera.main.gameObject.GetComponent<CameraRoom>();
     }
     
     void OnGUI()

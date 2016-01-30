@@ -39,10 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689ec70c13d2fb1468c05571a5daba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 11410138, guid: d802dda666e24c74c99aaf849de08325, type: 2}
+  weapons:
+  - {fileID: 11415838, guid: e895314ebc8ad924f988e75843484306, type: 2}
   floor: 0
   inGame: 0
   players: []
+  cam: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

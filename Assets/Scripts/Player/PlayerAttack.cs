@@ -70,6 +70,7 @@ public class PlayerAttack : MonoBehaviour {
         weapon.transform.parent = weaponHolder.transform;
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = new Quaternion();
+        weapon.life = player.GetLife();
     }
 
     public void EquipSkill(Skill _skill)
@@ -85,7 +86,7 @@ public class PlayerAttack : MonoBehaviour {
 
     public void EquipDefault()
     {
-        //EquipWeapon(GameManager.instance.weapons[Random.Range(0, GameManager.instance.weapons.Length)]);
+        EquipWeapon(GameManager.instance.weapons[Random.Range(0, GameManager.instance.weapons.Length)]);
         //EquipSkill(GameManager.instance.skills[Random.Range(0, GameManager.instance.skills.Length)]);
     }
 

@@ -3,6 +3,7 @@
 public class Weapon : MonoBehaviour {
 
     public bool invertedDepth = false;
+    public Life life;
     public Sprite pickItem;
     public int damage = 1;
     public float attackRate = 2f;

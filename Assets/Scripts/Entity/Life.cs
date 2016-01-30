@@ -1,17 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Life : MonoBehaviour {
 
     public int maxLife;
-    public UILife lifeUI;
+    public Image bar;
     private int life;
     private bool dead = false;
     private Animator anim;
     
     void Awake()
     {
+        life = maxLife;
         if(anim == null)
             anim = GetComponentInChildren<Animator>();
+            
+            ShowLife();
     }
 
 
@@ -22,8 +26,7 @@ public class Life : MonoBehaviour {
         if(anim)
             anim.SetTrigger("Hit");
 
-        if (lifeUI)
-            lifeUI.ShowLife(life, maxLife);
+        ShowLife();
 
         if (!dead && life <= 0)
         {
@@ -33,5 +36,10 @@ public class Life : MonoBehaviour {
     
     public bool IsDead(){
         return dead;
+    }
+    
+    public void ShowLife()
+    {
+        this.bar.fillAmount = 1f / (float)maxLife * (float)life;
     }
 }

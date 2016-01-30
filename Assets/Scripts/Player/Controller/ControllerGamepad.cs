@@ -15,7 +15,7 @@ public class ControllerGamepad : Controller {
 
     public override bool IsFirePressed()
     {
-        return (!player.IsDead() && (GamePad.GetState(index).Buttons.B == ButtonState.Pressed));
+        return (!player.IsDead() && (GamePad.GetState(index).Buttons.X == ButtonState.Pressed));
     }
 
     public override bool IsSpecialPressed()
