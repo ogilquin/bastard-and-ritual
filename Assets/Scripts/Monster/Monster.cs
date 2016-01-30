@@ -18,6 +18,9 @@ public class Monster : MonoBehaviour {
 	private MonsterAttack monsterAttack;
 	private Life life;
 
+	[HideInInspector]
+	public Player playerTarget;
+
 	void Awake() {
 		monsterAttack = gameObject.GetComponent<MonsterAttack>();
 		life = gameObject.GetComponent<Life>();
@@ -37,6 +40,7 @@ public class Monster : MonoBehaviour {
 		this.fightMean = fightMean;
 
 		iaToFollow = (GameObject) Instantiate(MonsterSwordIAPrefab, transform.position, Quaternion.identity);
+		GetComponentInChildren<TakeDamage>().Setup(gameObject);
 	}
 
 	public Life GetLife(){

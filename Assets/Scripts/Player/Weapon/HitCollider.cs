@@ -5,7 +5,8 @@ public class HitCollider : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collider) {
         TakeDamage other = collider.gameObject.GetComponent<TakeDamage>();
-        if(other != null && other.life != weapon.life)
-            other.Damage(weapon.damage);
+		if (other != null && other.life != weapon.life) {
+			other.Damage(weapon.damage, gameObject);
+		}
     }
 }

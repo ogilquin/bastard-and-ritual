@@ -58,12 +58,12 @@ CircleCollider2D:
   m_GameObject: {fileID: 194970}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 87fc1c458f0395c4d87bda621d3d30f9, type: 2}
+  m_Material: {fileID: 6200000, guid: fb3fd9c00a4593f41a4c13749ed91039, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.51
 --- !u!114 &11413302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,6 +186,26 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.41176468
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _canMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _allowedMovementAxes.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _allowedMovementAxes.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: fb3fd9c00a4593f41a4c13749ed91039, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194970}

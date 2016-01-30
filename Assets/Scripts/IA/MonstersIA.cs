@@ -14,6 +14,7 @@ public class MonstersIA : MonoBehaviour {
 
 		foreach (Monster monster in monsters) {
 			PassiveVehicle2D targetPlayerVehicle = (PassiveVehicle2D) players[0].GetComponent<PassiveVehicle2D>();
+			monster.playerTarget = players[0];
 
 			if (monster.fightMean == Monster.FightMean.Hit) {
 				SteerForPursuit2D steerForPursuit = (SteerForPursuit2D) monster.iaToFollow.GetComponent<SteerForPursuit2D>();

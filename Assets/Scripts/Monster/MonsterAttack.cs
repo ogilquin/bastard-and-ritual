@@ -6,6 +6,12 @@ public class MonsterAttack : Attack {
 	private float rotation = 0f;
 	private Monster monster;
 
+	public float distanceMinToAttackWithSword = .5f;
+	public float durationBetweenTwoHit = 1f;
+	public float durationBetweenTwoShoot = 1f;
+
+	private float lastAttackTime = 0;
+
 	void Awake() {
 		monster = gameObject.GetComponent<Monster>();
 	}
@@ -18,27 +24,32 @@ public class MonsterAttack : Attack {
 		if (weapon) {
 			if (weapon.rotate) {
 				// Calcule de la rotation de l'arme
-				/*Vector2 aim = player.GetController().Aim();
+				Vector2 aim = monster.playerTarget.transform.position - monster.transform.position;
 				direction = (aim == Vector2.zero) ? direction : aim;
 
 				rotation = Vector2.Angle(direction, -Vector2.up);
 				if (direction.x < 0f)
 					rotation = 360f - rotation;
-				*/
+				
 				Vector3 position = weaponHolder.transform.localPosition;
 				float vertical = (weapon.invertedDepth) ? -direction.y : direction.y;
 				if (vertical > 0f) { position.z = 0f; } else { position.z = -0.3f; }
 
 				// Applique la rotation et position de l'arme
 				weaponHolder.transform.localPosition = position;
-				/*weaponHolder.transform.eulerAngles = new Vector3(0f, 0f, rotation);*/
+				weaponHolder.transform.eulerAngles = new Vector3(0f, 0f, rotation);
 			}
 
 			// Gestion des attaques
-			/*if (player.GetController().IsFirePressed())
-			{
-				weapon.Attack();
-			}*/
+			if (monster.fightMean == Monster.FightMean.Hit) {
+				float distanceToTarget = Vector2.Distance((Vector2) monster.transform.position, (Vector2) monster.playerTarget.transform.position);
+				if (distanceToTarget < distanceMinToAttackWithSword) {
+					if (Time.time - lastAttackTime >= durationBetweenTwoHit) {
+						weapon.Attack();
+						lastAttackTime = Time.time;
+					}
+				}
+			}
 		}
 	}
 

@@ -22,6 +22,8 @@ public class Player : MonoBehaviour {
         } else if(playerList.type == ControllerType.Keyboard) {
             this.controller = new ControllerKeyboard(life);
         }
+
+		((TakeDamage) GetComponentInChildren<TakeDamage>()).Setup(gameObject);
     }
 
     public int GetNumber()
