@@ -40,6 +40,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 11410138, guid: d802dda666e24c74c99aaf849de08325, type: 2}
+  monsterSwordPrefab: {fileID: 11449722, guid: 46b1b11ea31c9994dac659ada9552bd6, type: 2}
+  monsterCrossBowPrefab: {fileID: 11469800, guid: c4d609067e9711347bd763858aa28b57,
+    type: 2}
   weapons:
   - {fileID: 11415838, guid: e895314ebc8ad924f988e75843484306, type: 2}
   floor: 0

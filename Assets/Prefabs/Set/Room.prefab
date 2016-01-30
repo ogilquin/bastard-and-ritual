@@ -113,7 +113,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &129388
 GameObject:
@@ -126,6 +126,7 @@ GameObject:
   - 95: {fileID: 9578798}
   - 114: {fileID: 11432676}
   - 114: {fileID: 11404894}
+  - 61: {fileID: 6145400}
   m_Layer: 0
   m_Name: Door Top
   m_TagString: Untagged
@@ -163,7 +164,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &147830
 GameObject:
@@ -210,7 +211,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &162218
 GameObject:
@@ -244,7 +245,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &175386
 GameObject:
@@ -340,7 +341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465916}
@@ -414,7 +415,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.5, z: 0}
+  m_LocalPosition: {x: 0, y: -5.5, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465712}
@@ -567,6 +568,20 @@ BoxCollider2D:
   m_Offset: {x: -0.5, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 12}
+--- !u!61 &6145400
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
 --- !u!61 &6176612
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -771,9 +786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f8525c1b89c5c478aff2f30a94037e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
   height: 12
   width: 12
+  minHittingMonsters: 0
+  maxHittingMonster: 0
+  minShootingMonsters: 0
+  maxShootingMonsters: 0
   wallTop: {fileID: 6191058}
   wallBottom: {fileID: 6176612}
   wallLeft: {fileID: 6178930}
@@ -782,7 +800,6 @@ MonoBehaviour:
   doorBottom: {fileID: 11458462}
   doorLeft: {fileID: 11496928}
   doorRight: {fileID: 11405302}
-  hasMonsters: 1
 --- !u!114 &11496928
 MonoBehaviour:
   m_ObjectHideFlags: 1

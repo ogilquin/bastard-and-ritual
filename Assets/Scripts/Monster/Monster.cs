@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour {
 
 	private MonsterAttack monsterAttack;
 	private Life life;
+    private Room spawner;
 
 	void Awake() {
 		monsterAttack = gameObject.GetComponent<MonsterAttack>();
@@ -26,15 +27,22 @@ public class Monster : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+   
 	void Update () {
 		if (iaToFollow != null) {
 			transform.position = iaToFollow.transform.position;
 		}
+        
+        if(life.IsDead()){
+            //TODO: death
+            spawner.Killed(this);
+            gameObject.SetActive(false);
+        }
 	}
 
-	public void SetupMonster(FightMean fightMean) {
+	public void SetupMonster(FightMean fightMean, Room spawner) {
 		this.fightMean = fightMean;
+        this.spawner = spawner;
 
 		iaToFollow = (GameObject) Instantiate(MonsterSwordIAPrefab, transform.position, Quaternion.identity);
 	}
