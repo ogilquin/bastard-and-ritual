@@ -14,9 +14,8 @@ GameObject:
   - 114: {fileID: 11476580}
   - 58: {fileID: 5802984}
   - 50: {fileID: 5071644}
-  - 114: {fileID: 11446118}
   m_Layer: 0
-  m_Name: MonsterBladeIA
+  m_Name: MonsterHittingIA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,18 +94,6 @@ MonoBehaviour:
   _traceAdjustments: 0
   _accelerationRate: 5
   _decelerationRate: 8
---- !u!114 &11446118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d9c0241584e3941a12f0b17f9af1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTarget: {fileID: 0}
 --- !u!114 &11455420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +168,23 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 30efb6eeafae8e74b89a7161a8b84d53,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 0.41176468
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: 0.41176468
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 0.41176468
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
