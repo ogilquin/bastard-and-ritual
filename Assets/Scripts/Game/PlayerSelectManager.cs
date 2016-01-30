@@ -10,6 +10,9 @@ public class PlayerSelectManager : MonoBehaviour {
     private List<PlayerList> players = new List<PlayerList>();
     private List<int> testable;
     
+    private bool keyboard = false;
+    private bool start = false;
+    
     void Awake()
     {
         testable = new List<int>();
@@ -45,9 +48,16 @@ public class PlayerSelectManager : MonoBehaviour {
             }
         }
 
-        if (Input.GetButtonDown("K1_Fire"))
+        if (Input.GetButtonDown("K1_Fire") && keyboard == false)
         {
             AddPlayer(players.Count+1, 0, ControllerType.Keyboard);
+            keyboard = true;
+            return;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            StartGame();
             return;
         }
 	}
@@ -60,10 +70,12 @@ public class PlayerSelectManager : MonoBehaviour {
     }
     
     void StartGame(){
+        if(start == true) return;
         if(minPlayer > players.Count || GameManager.instance.inGame == true)
             return;
             
         Debug.Log("Launch game");
+        start = true;
         GameManager.instance.LaunchGame(players.ToArray());
         Destroy(gameObject);
     }
