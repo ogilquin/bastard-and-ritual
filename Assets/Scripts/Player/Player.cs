@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         playerAttack = gameObject.GetComponent<PlayerAttack>();
         life = gameObject.GetComponent<Life>();
     }

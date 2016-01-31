@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public string[] levels;
     public Player playerPrefab;
 	public Monster monsterSwordPrefab;
 	public Monster monsterCrossBowPrefab;
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
     public List<Player> players = new List<Player>();
     public CameraRoom cam;
     private bool initGUI = true;
+    private AsyncOperation asyncOp;
     
     void Awake()
     {
@@ -50,18 +54,33 @@ public class GameManager : MonoBehaviour
     
     public void LaunchGame(PlayerList[] playersList)
     {
+        Debug.Log("Launch: "+playersList);
         foreach (PlayerList playerList in playersList)
         {
-            Player p = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity) as Player;
+            Debug.Log("Launch: "+playerList);
+            Player p = Instantiate(playerPrefab, new Vector2(-9999f, -9999f), Quaternion.identity) as Player;
             p.SetupPlayer(playerList);
             players.Add(p);
         }
         
         inGame = true;
+        
+        if(floor == 0)
+            NextLevel();
     }
     
-    void Update()
+    public void NextLevel()
     {
-
+        ++floor;
+        if(levels.Length > 0)
+            StartCoroutine("LoadLevel");
+    }
+    
+    IEnumerator LoadLevel() {
+        Debug.LogWarning("ASYNC LOAD STARTED - " +
+        "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
+        asyncOp = SceneManager.LoadSceneAsync(levels[Random.Range(0, levels.Length)]);
+        asyncOp.allowSceneActivation = true;
+        yield return asyncOp;
     }
 }
