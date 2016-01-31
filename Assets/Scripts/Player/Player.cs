@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
             this.controller = new ControllerKeyboard(life);
         }
         
-        Skin skin = GameManager.instance.GetComponentInChildren<Skin>() as Skin;
+        Skin skin = gameObject.GetComponentInChildren<Skin>() as Skin;
         if(skin) skin.Skining(this.number);
 
 		(GetComponentInChildren<TakeDamage>() as TakeDamage).Setup(gameObject);
