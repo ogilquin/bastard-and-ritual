@@ -40,14 +40,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - level
+  - level-1
+  - level-2
   playerPrefab: {fileID: 11410138, guid: d802dda666e24c74c99aaf849de08325, type: 2}
   monsterSwordPrefab: {fileID: 11449722, guid: 46b1b11ea31c9994dac659ada9552bd6, type: 2}
   monsterCrossBowPrefab: {fileID: 11469800, guid: c4d609067e9711347bd763858aa28b57,
     type: 2}
   hitWeapons:
+  - {fileID: 11411384, guid: 4c42d8784db311d4cab7844fec6e9319, type: 2}
+  shootWeapons:
+  - {fileID: 11457282, guid: 733eb2683caf1ff40a46f85df5224504, type: 2}
+  playerWeapons:
   - {fileID: 11487324, guid: f617dbf6f03d7194aa62878f119248c3, type: 2}
-  shootWeapons: []
   skills:
   - {fileID: 11413332, guid: 68f7e964c50eb114db8e824de6798c78, type: 2}
   playerSkins:
