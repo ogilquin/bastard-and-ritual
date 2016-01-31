@@ -50,7 +50,15 @@ public class PlayerAttack : Attack {
                 skill.Special(player.GetController().Move().normalized);
             }
         }
-        
+
+		if (player.isTraitor) {
+			if (player.GetController().IsTrapPressed()) {
+				Weapon [] traps = GameManager.instance.currentRoom.GetComponentsInChildren<Weapon>();
+				foreach (Weapon trap in traps) {
+					trap.Attack();
+				}
+			}
+		}
 	}
 
     public void EquipSkill(Skill _skill)

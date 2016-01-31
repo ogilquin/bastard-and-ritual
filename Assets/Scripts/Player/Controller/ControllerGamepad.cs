@@ -23,6 +23,11 @@ public class ControllerGamepad : Controller {
         return (!player.IsDead() && (GamePad.GetState(index).Buttons.A == ButtonState.Pressed));
     }
 
+	public override bool IsTrapPressed()
+	{
+		return (!player.IsDead() && (GamePad.GetState(index).Buttons.B == ButtonState.Pressed));
+	}
+
     public override Vector2 Move()
     {
         GamePadState state = GamePad.GetState(index);

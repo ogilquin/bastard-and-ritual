@@ -10,6 +10,9 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public int numMonstersAttacking = 0;
 
+	[HideInInspector]
+	public bool isTraitor = false;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);

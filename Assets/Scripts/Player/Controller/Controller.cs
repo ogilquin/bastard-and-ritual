@@ -17,6 +17,11 @@ public class Controller {
         return false;
     }
 
+	public virtual bool IsTrapPressed()
+	{
+		return false;
+	}
+
     public virtual Vector2 Move()
     {
         return new Vector2();
