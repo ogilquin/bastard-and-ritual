@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnitySteer2D.Behaviors;
 
 public class MonsterAttack : Attack {
 	private Vector2 direction = new Vector2(1f, 1f);
 	private float rotation = 0f;
 	private Monster monster;
+
+	private Animator anim;
+
+	private float lastHit = 0;
 
 	public float distanceMinToAttackWithSword = .5f;
 	public float durationBetweenTwoHit = 1f;
@@ -15,6 +20,7 @@ public class MonsterAttack : Attack {
 	void Awake() {
 		monster = gameObject.GetComponent<Monster>();
 		CanAttack = true;
+		anim = GetComponentInChildren<Animator>();
 	}
 
 	void Start() {
@@ -54,8 +60,12 @@ public class MonsterAttack : Attack {
 
 	public void AttackWithWeapon() {
 		if (Time.time - lastAttackTime >= durationBetweenTwoHit) {
-			weapon.Attack();
-			lastAttackTime = Time.time;
+			if (monster.fightMean == Monster.FightMean.Hit && weapon.GetReady() && Time.time - lastHit > .5f) {
+				monster.iaToFollow.GetComponent<AutonomousVehicle2D>().CanMove = false;
+				weapon.AttackWithDelay(monster, .3f, 1f);
+				anim.SetTrigger("Attack");
+				lastHit = Time.time;
+			}
 		}
 	}
 

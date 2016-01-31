@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnitySteer2D.Behaviors;
 
 public class Weapon : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class Weapon : MonoBehaviour {
     public bool rotate = true;
     protected bool ready = false;
 
+	private Monster monster;
     protected Animator anim;
 
 	public virtual void Awake ()
@@ -33,8 +35,30 @@ public class Weapon : MonoBehaviour {
         return true;
     }
 
-    public virtual void Ready()
-    {
-        ready = true;
-    }
+	public void AttackWithDelay(Monster monster, float delay, float delayToWait) {
+		if (ready) {
+			this.monster = monster;
+			Invoke("Attack", delay);
+			Invoke("enablePlayerCanMove", delayToWait);
+		}
+	}
+
+	public void enablePlayerCanMove() {
+		monster.iaToFollow.GetComponent<AutonomousVehicle2D>().CanMove = true;
+	}
+
+	public virtual void Ready()
+	{
+		ready = true;
+	}
+
+	public bool GetReady()
+	{
+		return ready;
+	}
+
+	public void SetReady(bool value)
+	{
+		ready = value;
+	}
 }
