@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 input = Vector2.zero;
     private Vector2 dash = Vector2.zero;
 
+	[HideInInspector]
+	public bool CanMove = true;
+
     void Awake()
     {
         anim = model.GetComponent<Animator>();
@@ -39,24 +42,27 @@ public class PlayerMovement : MonoBehaviour {
 
     void FixedUpdate()
     {        
-        if (input == Vector2.zero)
-        {
-            if(anim) anim.SetBool("Run", false);
-        }
-        else
-        {
-            if(anim) anim.SetBool("Run", true);
-        }
+		if (CanMove) {
+			rigidbody2d.velocity = input * speed;
 
-        rigidbody2d.velocity = input * speed;
+			if (input == Vector2.zero)
+			{
+				if(anim) anim.SetBool("Run", false);
+			}
 
-        if (dash != Vector2.zero)
-        {
-            rigidbody2d.velocity += dash;
-            dash /= 2f;
-            if (dash.magnitude < 0.01f)
-                dash = Vector2.zero;
-        }
+			else
+			{
+				if(anim) anim.SetBool("Run", true);
+			}
+			
+			if (dash != Vector2.zero)
+			{
+				rigidbody2d.velocity += dash;
+				dash /= 2f;
+				if (dash.magnitude < 0.01f)
+					dash = Vector2.zero;
+			}
+		}
     }
 
     public void Dash(Vector2 direction)

@@ -11,6 +11,7 @@ public class PlayerAttack : Attack {
     void Awake()
     {
         player = gameObject.GetComponent<Player>();
+		CanAttack = true;
     }
 
 	void Start()
@@ -42,7 +43,7 @@ public class PlayerAttack : Attack {
             }
 
             // Gestion des attaques
-            if (player.GetController().IsFirePressed())
+			if (player.GetController().IsFirePressed() && CanAttack)
             {
                 weapon.Attack();
             }

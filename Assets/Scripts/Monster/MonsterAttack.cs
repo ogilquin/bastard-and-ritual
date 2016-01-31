@@ -14,6 +14,7 @@ public class MonsterAttack : Attack {
 
 	void Awake() {
 		monster = gameObject.GetComponent<Monster>();
+		CanAttack = true;
 	}
 
 	void Start() {
@@ -22,7 +23,7 @@ public class MonsterAttack : Attack {
 
 	void Update() {
 		if (weapon) {
-			if (weapon.rotate) {
+			if (weapon.rotate && monster.playerTarget != null) {
 				// Calcule de la rotation de l'arme
 				Vector2 aim = monster.playerTarget.transform.position - monster.transform.position;
 				direction = (aim == Vector2.zero) ? direction : aim;
@@ -41,7 +42,7 @@ public class MonsterAttack : Attack {
 			}
 
 			// Gestion des attaques
-			if (monster.fightMean == Monster.FightMean.Hit) {
+			if (monster.fightMean == Monster.FightMean.Hit && monster.playerTarget != null && ! monster.playerTarget.GetLife().IsDead() && CanAttack) {
 				float distanceToTarget = Vector2.Distance((Vector2) monster.transform.position, (Vector2) monster.playerTarget.transform.position);
 				if (distanceToTarget < distanceMinToAttackWithSword) {
 					if (Time.time - lastAttackTime >= durationBetweenTwoHit) {

@@ -5,6 +5,11 @@ public class Attack : MonoBehaviour {
 	public GameObject weaponHolder;
 
 	protected Weapon weapon;
+	[HideInInspector]
+	public bool CanAttack = true;
+
+	void Awake() {
+	}
 
 	void Start () {
 	}

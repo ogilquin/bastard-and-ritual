@@ -28,10 +28,15 @@ public class Room : MonoBehaviour {
     {
         Debug.Log("Enter room");
         gameObject.SetActive(true);
-        
-        foreach(Player player in GameManager.instance.players)
-            if(!player.GetLife().IsDead())
-                player.transform.position = door.transform.position;
+		int i = 0;
+		foreach (Player player in GameManager.instance.players) {
+			if (!player.GetLife().IsDead()) {
+				Vector2 pos = door.transform.position;
+				pos.x += -2 + i * 1;
+				player.transform.position = pos;
+				i++;
+			}
+		}
                 
         SpawnMonstersOnce();
     }

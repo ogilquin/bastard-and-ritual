@@ -7,6 +7,9 @@ public class Player : MonoBehaviour {
     private PlayerAttack playerAttack;
     private Life life;
 
+	[HideInInspector]
+	public int numMonstersAttacking = 0;
+
     void Awake()
     {
         playerAttack = gameObject.GetComponent<PlayerAttack>();

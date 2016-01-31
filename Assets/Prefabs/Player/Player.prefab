@@ -240,8 +240,8 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136490}
   m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 0
+  m_Mass: 1
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 122660}
+  CanAttack: 0
 --- !u!114 &11463166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,7 +370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d068cde0b095ec14a8de712ede10df6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageForceScale: 3
   life: {fileID: 11475790}
+  damageDuration: 0.5
 --- !u!114 &11465158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,6 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 110476}
   speed: 4
+  CanMove: 1
 --- !u!114 &11475790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -629,6 +633,14 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: fb3fd9c00a4593f41a4c13749ed91039, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 136490}
