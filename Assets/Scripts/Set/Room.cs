@@ -31,14 +31,16 @@ public class Room : MonoBehaviour {
 		int i = 0;
 		foreach (Player player in GameManager.instance.players) {
 			if (!player.GetLife().IsDead()) {
-				Vector2 pos = door.transform.position;
+				Vector2 pos = door.spawnPoint.transform.position;
 				pos.x += -2 + i * 1;
 				player.transform.position = pos;
 				i++;
 			}
 		}
-                
-        SpawnMonstersOnce();
+        
+        GameManager.instance.cam.FocusRoom(this);
+        if(maxHittingMonster > 0 || maxShootingMonsters > 0)      
+            SpawnMonstersOnce();
     }
     
     public void Exit()
