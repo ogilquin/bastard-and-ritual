@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     public CameraRoom cam;
     private bool initGUI = true;
     private AsyncOperation asyncOp;
+
+	[HideInInspector]
+	public Room currentRoom;
     
     void Awake()
     {
@@ -55,15 +58,23 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void LaunchGame(PlayerList[] playersList)
+    public void LaunchGame(PlayerList[] playersList, int traitorIndex)
     {
         Debug.Log("Launch: "+playersList);
+		int i = 0;
         foreach (PlayerList playerList in playersList)
         {
             Debug.Log("Launch: "+playerList);
             Player p = Instantiate(playerPrefab, new Vector2(-9999f, -9999f), Quaternion.identity) as Player;
             p.SetupPlayer(playerList);
             players.Add(p);
+
+			if (i == traitorIndex) {
+				p.isTraitor = true;
+				Debug.Log(i + " IS TRAITOR");
+			}
+
+			i++;
         }
         
         inGame = true;

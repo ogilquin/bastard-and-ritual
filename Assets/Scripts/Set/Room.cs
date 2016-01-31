@@ -26,6 +26,8 @@ public class Room : MonoBehaviour {
     
     public void Enter(Door door)
     {
+		GameManager.instance.currentRoom = this;
+
         Debug.Log("Enter room");
         gameObject.SetActive(true);
 

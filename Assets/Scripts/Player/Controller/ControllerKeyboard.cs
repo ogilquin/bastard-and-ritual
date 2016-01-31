@@ -18,6 +18,11 @@ public class ControllerKeyboard : Controller {
     {
         return ButtonPress("K1_Special");
     }
+	public override bool IsTrapPressed()
+	{
+		return ButtonPress("K1_Special");
+	}
+
 
     public override Vector2 Move()
     {

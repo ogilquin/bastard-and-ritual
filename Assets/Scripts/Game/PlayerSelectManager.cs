@@ -72,10 +72,12 @@ public class PlayerSelectManager : MonoBehaviour {
         if(start == true) return;
         if(minPlayer > players.Count || GameManager.instance.inGame == true)
             return;
-            
+           
+		int traitorIndex = Random.Range(0, players.Count);
+
         Debug.Log("Launch game");
         start = true;
-        GameManager.instance.LaunchGame(players.ToArray());
+		GameManager.instance.LaunchGame(players.ToArray(), traitorIndex);
         Destroy(gameObject);
     }
 }
