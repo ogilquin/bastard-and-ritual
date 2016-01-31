@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 411180}
   - 95: {fileID: 9522694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 224: {fileID: 22425556}
   - 222: {fileID: 22292538}
   - 114: {fileID: 11465158}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weapon holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 223: {fileID: 22319784}
   - 114: {fileID: 11472262}
   - 114: {fileID: 11432262}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - 114: {fileID: 11451180}
   - 114: {fileID: 11475790}
   - 114: {fileID: 11413126}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - 4: {fileID: 402172}
   - 61: {fileID: 6108766}
   - 114: {fileID: 11463166}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TakeDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 473182}
   - 212: {fileID: 21264216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - 224: {fileID: 22419078}
   - 222: {fileID: 22207218}
   - 114: {fileID: 11497634}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 436406}
   - 212: {fileID: 21293302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,6 +629,10 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: fb3fd9c00a4593f41a4c13749ed91039, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 136490}

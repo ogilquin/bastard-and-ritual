@@ -11,7 +11,8 @@ GameObject:
   - 95: {fileID: 9537034}
   - 114: {fileID: 11478756}
   - 114: {fileID: 11436596}
-  m_Layer: 0
+  - 61: {fileID: 6113480}
+  m_Layer: 16
   m_Name: Door  Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460474}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +60,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 466508}
   - 212: {fileID: 21299414}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 426018}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405148}
   - 212: {fileID: 21255492}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +124,8 @@ GameObject:
   - 95: {fileID: 9524462}
   - 114: {fileID: 11479716}
   - 114: {fileID: 11466154}
-  m_Layer: 0
+  - 61: {fileID: 6168040}
+  m_Layer: 16
   m_Name: Door  Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +159,8 @@ GameObject:
   - 95: {fileID: 9593612}
   - 114: {fileID: 11428416}
   - 114: {fileID: 11416286}
-  m_Layer: 0
+  - 61: {fileID: 6106064}
+  m_Layer: 16
   m_Name: Door Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +192,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 422098}
   - 212: {fileID: 21211284}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +207,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412938}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +222,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453494}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,8 +257,7 @@ GameObject:
   - 114: {fileID: 11487786}
   - 114: {fileID: 11474860}
   - 61: {fileID: 6196564}
-  - 61: {fileID: 6154740}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Door Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +272,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405232}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +304,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 491508}
   - 212: {fileID: 21219288}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +330,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.06, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405686}
@@ -396,7 +398,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.06, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433768}
@@ -450,7 +452,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44, y: -0.06, z: 0}
+  m_LocalPosition: {x: -1.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 412970}
@@ -476,7 +478,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44, y: -0.06, z: 0}
+  m_LocalPosition: {x: 1.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 495296}
@@ -555,6 +557,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 439348}
   m_RootOrder: 2
+--- !u!61 &6106064
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+--- !u!61 &6113480
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.25, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2}
 --- !u!61 &6135402
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -569,20 +599,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Size: {x: 12, y: 1}
---- !u!61 &6154740
+--- !u!61 &6168040
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178164}
+  m_GameObject: {fileID: 149734}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.25, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.5, y: 2}
 --- !u!61 &6179954
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -620,7 +650,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2

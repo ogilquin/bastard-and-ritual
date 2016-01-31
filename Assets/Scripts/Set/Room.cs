@@ -31,9 +31,11 @@ public class Room : MonoBehaviour {
         
         foreach(Player player in GameManager.instance.players)
             if(!player.GetLife().IsDead())
-                player.transform.position = door.transform.position;
-                
-        SpawnMonstersOnce();
+                player.transform.position = door.spawnPoint.transform.position;
+        
+        GameManager.instance.cam.FocusRoom(this);
+        if(maxHittingMonster > 0 || maxShootingMonsters > 0)
+            SpawnMonstersOnce();
     }
     
     public void Exit()
