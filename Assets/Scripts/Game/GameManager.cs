@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 	public Monster monsterSwordPrefab;
 	public Monster monsterCrossBowPrefab;
     public Weapon[] weapons;
+    public Skill[] skills;
+    public PlayerSkin[] playerSkins;
     public int floor = 0;
     public bool inGame = false;
     public List<Player> players = new List<Player>();

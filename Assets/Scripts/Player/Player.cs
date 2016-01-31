@@ -26,8 +26,11 @@ public class Player : MonoBehaviour {
         } else if(playerList.type == ControllerType.Keyboard) {
             this.controller = new ControllerKeyboard(life);
         }
+        
+        Skin skin = GameManager.instance.GetComponentInChildren<Skin>() as Skin;
+        if(skin) skin.Skining(this.number);
 
-		((TakeDamage) GetComponentInChildren<TakeDamage>()).Setup(gameObject);
+		(GetComponentInChildren<TakeDamage>() as TakeDamage).Setup(gameObject);
     }
 
     public int GetNumber()

@@ -35,6 +35,7 @@ public class Door : MonoBehaviour {
                 if(Mathf.Abs(angle) < 45f)
                 {
                     linkTo.GetRoom().Enter(linkTo);
+                    CancelInvoke();
                     Invoke("DelayExit", 1f);
                 }
             }

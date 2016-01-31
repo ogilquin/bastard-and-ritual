@@ -19,7 +19,7 @@ public class PlayerAttack : Attack {
         EquipDefault();
 	}
 
-	void Update()
+	void LateUpdate()
     {
         if (weapon)
         {
@@ -30,14 +30,8 @@ public class PlayerAttack : Attack {
                 direction = (aim == Vector2.zero) ? direction : aim;
 
                 rotation = Vector2.Angle(direction, -Vector2.up);
-                if (direction.x < 0f)
-                    rotation = 360f - rotation;
 
                 Vector3 position = weaponHolder.transform.localPosition;
-                float vertical = (weapon.invertedDepth) ? -direction.y : direction.y;
-                if (vertical > 0f) { position.z = 0f; } else { position.z = -0.3f; }
-
-                // Applique la rotation et position de l'arme
                 weaponHolder.transform.localPosition = position;
                 weaponHolder.transform.eulerAngles = new Vector3(0f, 0f, rotation);
             }
@@ -68,12 +62,13 @@ public class PlayerAttack : Attack {
         skill.transform.parent = player.transform;
         skill.transform.localPosition = Vector3.zero;
         skill.transform.localRotation = new Quaternion();
+        skill.owner = player;
     }
 
     public void EquipDefault()
     {
         EquipWeapon(GameManager.instance.weapons[Random.Range(0, GameManager.instance.weapons.Length)]);
-        //EquipSkill(GameManager.instance.skills[Random.Range(0, GameManager.instance.skills.Length)]);
+        EquipSkill(GameManager.instance.skills[Random.Range(0, GameManager.instance.skills.Length)]);
     }
 
     public Skill GetSkill()
