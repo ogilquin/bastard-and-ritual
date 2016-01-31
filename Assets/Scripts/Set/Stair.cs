@@ -6,12 +6,10 @@ public class Stair : MonoBehaviour {
     public bool usable = true;
     
     public void OnTriggerEnter2D(Collider2D collider) {
-        Debug.Log("Stair hit");
         if(usable == false)
             return;
             
         Player other = collider.gameObject.GetComponent<Player>();
-        Debug.Log(other);
         if(other)
         {
             Debug.Log(other);
