@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     public Player playerPrefab;
 	public Monster monsterSwordPrefab;
 	public Monster monsterCrossBowPrefab;
-    public Weapon[] weapons;
+	public Weapon[] hitWeapons;
+	public Weapon[] shootWeapons;
     public int floor = 0;
     public bool inGame = false;
     public List<Player> players = new List<Player>();

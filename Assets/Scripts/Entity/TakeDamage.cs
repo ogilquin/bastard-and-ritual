@@ -35,31 +35,36 @@ public class TakeDamage : MonoBehaviour {
 			monsterRigidBody = this.item.GetComponent<Rigidbody2D>();
 			monsterVehicle = monsterRigidBody.gameObject.GetComponent<AutonomousVehicle2D>();
 			monsterAttack = monster.GetComponentInChildren<Attack>();
+			life = monster.GetLife();
 		} else if (player != null) {
 			playerRigidBody = item.GetComponent<Rigidbody2D>();
 			playerMovement = player.GetComponent<PlayerMovement>();
 			playerAttack = player.GetComponentInChildren<Attack>();
+			life = player.GetLife();
 		}
+
 	}
 
     public void Damage(int damage, GameObject damager) {
-		Vector2 damageForce = damager.transform.position - transform.position;
-		damageForce.Normalize();
-		damageForce.Scale(vectorDamageScale);
+		if (damagedTime < 0) {
+			Vector2 damageForce = damager.transform.position - transform.position;
+			damageForce.Normalize();
+			damageForce.Scale(vectorDamageScale);
 
-		if (monster != null) {
-			monsterVehicle.CanMove = false;
-			monsterAttack.CanAttack = false;
-			monsterRigidBody.AddForce(damageForce, ForceMode2D.Impulse);
-			damagedTime = Time.time;
-		} else if (player != null) {
-			playerMovement.CanMove = false;
-			playerAttack.CanAttack = false;
-			playerRigidBody.AddForce(damageForce, ForceMode2D.Impulse);
-			damagedTime = Time.time;
+			if (monster != null) {
+				monsterVehicle.CanMove = false;
+				monsterAttack.CanAttack = false;
+				monsterRigidBody.AddForce(damageForce, ForceMode2D.Impulse);
+				damagedTime = Time.time;
+			} else if (player != null) {
+				playerMovement.CanMove = false;
+				playerAttack.CanAttack = false;
+				playerRigidBody.AddForce(damageForce, ForceMode2D.Impulse);
+				damagedTime = Time.time;
+			}
+			
+			life.Damage(damage);
 		}
-		
-		life.Damage(damage);
     }
 
 	void Update() {

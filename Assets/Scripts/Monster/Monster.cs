@@ -47,7 +47,12 @@ public class Monster : MonoBehaviour {
 		this.fightMean = fightMean;
         this.spawner = spawner;
 
-		iaToFollow = (GameObject) Instantiate(MonsterSwordIAPrefab, transform.position, Quaternion.identity);
+		if (fightMean == FightMean.Hit) {
+			iaToFollow = (GameObject) Instantiate(MonsterSwordIAPrefab, transform.position, Quaternion.identity);
+		} else if (fightMean == FightMean.Shoot) {
+			iaToFollow = (GameObject) Instantiate(MonsterCrossBowIAPrefab, transform.position, Quaternion.identity);
+		}
+
 		GetComponentInChildren<TakeDamage>().Setup(gameObject);
 	}
 
