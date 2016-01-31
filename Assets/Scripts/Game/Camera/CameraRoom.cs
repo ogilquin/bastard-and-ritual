@@ -20,6 +20,7 @@ public class CameraRoom : MonoBehaviour {
     void Awake()
     {
         cam = gameObject.GetComponent<Camera>() as Camera;
+        GameManager.instance.cam = this;
     }
 
     void LateUpdate()

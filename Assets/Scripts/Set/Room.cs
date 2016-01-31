@@ -28,15 +28,12 @@ public class Room : MonoBehaviour {
     {
         Debug.Log("Enter room");
         gameObject.SetActive(true);
-		int i = 0;
+
 		foreach (Player player in GameManager.instance.players) {
 			if (!player.GetLife().IsDead()) {
-				Vector2 pos = door.spawnPoint.transform.position;
-				pos.x += -2 + i * 1;
-				player.transform.position = pos;
-				i++;
-			}
-		}
+				player.transform.position = door.spawnPoint.transform.position;
+            }
+        }
         
         GameManager.instance.cam.FocusRoom(this);
         if(maxHittingMonster > 0 || maxShootingMonsters > 0)      

@@ -39,6 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689ec70c13d2fb1468c05571a5daba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levels:
+  - level
   playerPrefab: {fileID: 11410138, guid: d802dda666e24c74c99aaf849de08325, type: 2}
   monsterSwordPrefab: {fileID: 11449722, guid: 46b1b11ea31c9994dac659ada9552bd6, type: 2}
   monsterCrossBowPrefab: {fileID: 11469800, guid: c4d609067e9711347bd763858aa28b57,
