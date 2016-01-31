@@ -41,7 +41,6 @@ public class MonsterStateMachine : MonoBehaviour {
 
 				int sign = Vector2.Angle(evasionSteering.cachedForce, Vector2.left) > 90 ? 1 : -1;
 				model.transform.localScale = new Vector3(Mathf.Sign(sign), 1f, 1f);
-
 			} else {
 				if (monster.fightMean == Monster.FightMean.Shoot) {
 					if (canSightThrough()) {

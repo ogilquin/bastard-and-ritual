@@ -65,6 +65,8 @@ public class MonsterAttack : Attack {
 				weapon.AttackWithDelay(monster, .3f, 1f);
 				anim.SetTrigger("Attack");
 				lastHit = Time.time;
+			} else if (monster.fightMean == Monster.FightMean.Shoot && weapon.GetReady() && Time.time - lastHit > .5f) {
+				weapon.Attack();
 			}
 		}
 	}
