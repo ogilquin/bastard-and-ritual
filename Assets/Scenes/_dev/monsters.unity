@@ -206,7 +206,7 @@ MonoBehaviour:
   withKeyboard: 1
   goThrouhgSelect: 1
   goToPlay: 1
-  numPlayers: 1
+  numPlayers: 4
 --- !u!1 &258468625
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +437,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11415838, guid: e895314ebc8ad924f988e75843484306,
         type: 2}
+    - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
+      propertyPath: floor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
   m_IsPrefabParent: 0

@@ -36,7 +36,7 @@ public class Door : MonoBehaviour {
                 {
                     linkTo.GetRoom().Enter(linkTo);
                     CancelInvoke();
-                    Invoke("DelayExit", 1f);
+                    Invoke("DelayExit", 0.5f);
                 }
             }
         }
