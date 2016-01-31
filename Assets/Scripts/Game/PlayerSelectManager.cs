@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using XInputDotNetPure;
 
@@ -11,6 +12,8 @@ public class PlayerSelectManager : MonoBehaviour {
     
     private bool keyboard = false;
     private bool start = false;
+    
+    public Image[] uiPlayers;
     
     void Awake()
     {
@@ -65,7 +68,9 @@ public class PlayerSelectManager : MonoBehaviour {
     {
         Debug.Log("Add player : " + number + ", controller: " + playerIndex);
         players.Add(new PlayerList(number, playerIndex, controllerType));
-        //UIManager.instance.Shake(50f, 10f, Vector2.zero);
+        
+        uiPlayers[number-1].sprite = GameManager.instance.playerSkins[number-1].ui;
+        UIManager.instance.Shake(50f, 10f, Vector2.zero);
     }
     
     public void StartGame(){

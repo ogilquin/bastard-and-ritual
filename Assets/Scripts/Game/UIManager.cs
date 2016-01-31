@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour
     private float reduction;
     private Vector2 direction;
 
-    new public CameraFollow camera;
     public Animator anim;
 
     public void Update()
@@ -67,20 +66,11 @@ public class UIManager : MonoBehaviour
     {
         anim.SetBool("Loading", false);
         anim.SetBool("SelectPlayer", false);
-        anim.SetBool("InGame", false);
 
         switch (state)
         {
             case State.PlayerSelection:
                 anim.SetBool("SelectPlayer", true);
-                break;
-                
-            case State.Loading:
-                anim.SetBool("Loading", true);
-                break;
-
-            case State.Play:
-                anim.SetBool("InGame", true);
                 break;
         }
     }
