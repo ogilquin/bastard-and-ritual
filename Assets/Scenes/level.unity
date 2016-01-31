@@ -170,58 +170,6 @@ Prefab:
       propertyPath: linkTo
       value: 
       objectReference: {fileID: 1808650438}
-    - target: {fileID: 171566, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 153860, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 169598, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 179814, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 173658, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 127750, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 119456, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 149734, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 193674, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 120058, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 135370, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 146534, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 178164, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
   m_IsPrefabParent: 0
