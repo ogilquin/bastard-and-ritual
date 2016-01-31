@@ -57,11 +57,14 @@ public class PlayerMovement : MonoBehaviour {
 			
 			if (dash != Vector2.zero)
 			{
+                if(anim) anim.SetBool("Dash", true);
 				rigidbody2d.velocity += dash;
 				dash /= 2f;
 				if (dash.magnitude < 0.01f)
 					dash = Vector2.zero;
-			}
+			} else {
+                if(anim) anim.SetBool("Dash", false);
+            }
 		}
     }
 

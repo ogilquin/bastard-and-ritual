@@ -45,8 +45,56 @@ MonoBehaviour:
   monsterSwordPrefab: {fileID: 11449722, guid: 46b1b11ea31c9994dac659ada9552bd6, type: 2}
   monsterCrossBowPrefab: {fileID: 11469800, guid: c4d609067e9711347bd763858aa28b57,
     type: 2}
-  weapons:
-  - {fileID: 11415838, guid: e895314ebc8ad924f988e75843484306, type: 2}
+  hitWeapons:
+  - {fileID: 11487324, guid: f617dbf6f03d7194aa62878f119248c3, type: 2}
+  shootWeapons: []
+  skills:
+  - {fileID: 11413332, guid: 68f7e964c50eb114db8e824de6798c78, type: 2}
+  playerSkins:
+  - ui: {fileID: 21300000, guid: 5580d11e84704634491d55625cc7b9c1, type: 3}
+    avantBrasGauche: {fileID: 21300000, guid: f4315f92739fe39439e2c53999f080b9, type: 3}
+    botteDroit: {fileID: 21300000, guid: 48eb48d3e05d35344a05bcfd8eae88bd, type: 3}
+    botteGauche: {fileID: 21300000, guid: 5e1d5fb192cee974f971d1826c4e46f3, type: 3}
+    brasGauche: {fileID: 21300000, guid: 84015b8bfbdff134d8642610f1be51ab, type: 3}
+    corp: {fileID: 21300000, guid: ad36b6633eba3594e94103bb2ec7ce28, type: 3}
+    epauletteDroit: {fileID: 21300000, guid: cd964186e714cad49a6acdb29b1646fe, type: 3}
+    epauletteGaucheA: {fileID: 21300000, guid: 5c5a850c4eaaa8d45857be62185ee308, type: 3}
+    epauletteGaucheB: {fileID: 21300000, guid: 62396a6bbbb6def428d5cdc39d11a5be, type: 3}
+    jambeDroit: {fileID: 21300000, guid: 52c607015c6f56a43a4fb020a3036b67, type: 3}
+    jambeGauche: {fileID: 21300000, guid: ec6835baef686bc4e87337149b8b6503, type: 3}
+  - ui: {fileID: 21300000, guid: 4609206183ea27041a0bcdc790e9d5ba, type: 3}
+    avantBrasGauche: {fileID: 21300000, guid: fa33f012c9862284f9ec43a2d4f9cd1f, type: 3}
+    botteDroit: {fileID: 21300000, guid: c94ee650e2505e24393fa639e67fbe43, type: 3}
+    botteGauche: {fileID: 21300000, guid: dda58f04219d66d4092170bea5143775, type: 3}
+    brasGauche: {fileID: 21300000, guid: 5be404c08a07a0e4bb47d0d83e2abb4b, type: 3}
+    corp: {fileID: 21300000, guid: 983f372604e21074b8c990590ac7fcc3, type: 3}
+    epauletteDroit: {fileID: 21300000, guid: fa624c2e70fd0ca4985ab82c89da156e, type: 3}
+    epauletteGaucheA: {fileID: 21300000, guid: 117d41c4840deb748a87c770634be7d9, type: 3}
+    epauletteGaucheB: {fileID: 21300000, guid: 936c433f82780b3469121156c18a5297, type: 3}
+    jambeDroit: {fileID: 21300000, guid: f03c8329743e16c4eaa745eb209deb89, type: 3}
+    jambeGauche: {fileID: 21300000, guid: 7e4b260938f7bd54d9cf3cf0fb9e155d, type: 3}
+  - ui: {fileID: 21300000, guid: 973365e32447b654f97340ed615c37ec, type: 3}
+    avantBrasGauche: {fileID: 21300000, guid: 40f8f4dbe84898648859245f3fca08cf, type: 3}
+    botteDroit: {fileID: 21300000, guid: 1177c014720dacb4e992d53625286f87, type: 3}
+    botteGauche: {fileID: 21300000, guid: cb4df16e405e72b43be7515ea611b227, type: 3}
+    brasGauche: {fileID: 21300000, guid: 2e3475096a8d4c1438f41d2bc7baa4e0, type: 3}
+    corp: {fileID: 21300000, guid: ed81708292b7a8c42bd976c1ebf295a0, type: 3}
+    epauletteDroit: {fileID: 21300000, guid: 6dba516516d68b741a13723e0eb3b21f, type: 3}
+    epauletteGaucheA: {fileID: 21300000, guid: 1e6a0846f6b977e41b0c3cf91b3d4304, type: 3}
+    epauletteGaucheB: {fileID: 21300000, guid: 552b7142495160645a780b5bc4aa628c, type: 3}
+    jambeDroit: {fileID: 21300000, guid: d8a17828642faba4a86101c0c629b0f9, type: 3}
+    jambeGauche: {fileID: 21300000, guid: f204e8d2f3d54fa4cb24ce920ff0ecdf, type: 3}
+  - ui: {fileID: 21300000, guid: 54bdf70381e9bbd46b61b87f859a46c2, type: 3}
+    avantBrasGauche: {fileID: 21300000, guid: d832d84f7063f8146a32d3a3fd27d3f2, type: 3}
+    botteDroit: {fileID: 21300000, guid: db59ea7c5b60b144f8002cc871ff53e1, type: 3}
+    botteGauche: {fileID: 21300000, guid: c15ff3a7067664c4186e004bd9464e24, type: 3}
+    brasGauche: {fileID: 21300000, guid: 1a9e89e0f6f1ac24e96efd5925262401, type: 3}
+    corp: {fileID: 21300000, guid: 0d821656067271342811824f3e2a365c, type: 3}
+    epauletteDroit: {fileID: 21300000, guid: 11f3ea0a7eec9ff43a5cb92bf99bcd89, type: 3}
+    epauletteGaucheA: {fileID: 21300000, guid: 642e95854d807e341a8e92235358e0e7, type: 3}
+    epauletteGaucheB: {fileID: 21300000, guid: 68e31b49ea27b2f47a740c2309fed104, type: 3}
+    jambeDroit: {fileID: 21300000, guid: 2f8028c9979aeeb4980d49e0c2dc28ab, type: 3}
+    jambeGauche: {fileID: 21300000, guid: a72c8246cf3ad484280ebb214b4f8dc1, type: 3}
   floor: 0
   inGame: 0
   players: []
