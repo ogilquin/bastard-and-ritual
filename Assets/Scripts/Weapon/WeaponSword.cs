@@ -13,7 +13,7 @@ public class WeaponSword : Weapon {
         attack = !attack;
         
         GameManager.instance.cam.ShakeCamera(0.3f, 7f, Vector2.zero);
-        anim.SetTrigger("Attack");
+		if (anim != null) anim.SetTrigger("Attack");
         return true;
     }
 

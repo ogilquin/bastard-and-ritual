@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &388684 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 467798, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+  m_PrefabInternal: {fileID: 71049802}
 --- !u!1001 &16403783
 Prefab:
   m_ObjectHideFlags: 0
@@ -173,7 +177,7 @@ Prefab:
     - target: {fileID: 11479716, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
       propertyPath: linkTo
       value: 
-      objectReference: {fileID: 918963284}
+      objectReference: {fileID: 0}
     - target: {fileID: 11477770, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
       propertyPath: minHittingMonsters
       value: 2
@@ -182,19 +186,13 @@ Prefab:
       propertyPath: maxHittingMonster
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 467798, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &71049803 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11479716, guid: 0b30b96d8e3bf074e94202878965f8dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 71049802}
-  m_Script: {fileID: 11500000, guid: 3d0a25e756a9e1341ae83bb864bbb0e4, type: 3}
---- !u!4 &71049804 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 455956, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-  m_PrefabInternal: {fileID: 71049802}
 --- !u!1 &198286726 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 113340, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
@@ -215,6 +213,16 @@ MonoBehaviour:
   goThrouhgSelect: 1
   goToPlay: 1
   numPlayers: 4
+--- !u!4 &258379322 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 467798, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+  m_PrefabInternal: {fileID: 918963282}
+--- !u!114 &258379324 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11433118, guid: 0b30b96d8e3bf074e94202878965f8dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 918963282}
+  m_Script: {fileID: 11500000, guid: 06f8525c1b89c5c478aff2f30a94037e, type: 3}
 --- !u!1 &258468625
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b934ae15973c2d34ca3241aa531181fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entrance: {fileID: 918963283}
+  entrance: {fileID: 258379324}
 --- !u!4 &390913097
 Transform:
   m_ObjectHideFlags: 0
@@ -292,8 +300,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 918963285}
-  - {fileID: 71049804}
+  - {fileID: 258379322}
+  - {fileID: 388684}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1001 &918963282
@@ -338,7 +346,7 @@ Prefab:
     - target: {fileID: 11478756, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
       propertyPath: linkTo
       value: 
-      objectReference: {fileID: 71049803}
+      objectReference: {fileID: 0}
     - target: {fileID: 11477770, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
       propertyPath: minHittingMonsters
       value: 1
@@ -355,25 +363,25 @@ Prefab:
       propertyPath: maxShootingMonsters
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11433118, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+      propertyPath: minHittingMonsters
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433118, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+      propertyPath: maxHittingMonster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433118, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+      propertyPath: minShootingMonsters
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433118, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
+      propertyPath: maxShootingMonsters
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &918963283 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11477770, guid: 0b30b96d8e3bf074e94202878965f8dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 918963282}
-  m_Script: {fileID: 11500000, guid: 06f8525c1b89c5c478aff2f30a94037e, type: 3}
---- !u!114 &918963284 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11478756, guid: 0b30b96d8e3bf074e94202878965f8dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 918963282}
-  m_Script: {fileID: 11500000, guid: 3d0a25e756a9e1341ae83bb864bbb0e4, type: 3}
---- !u!4 &918963285 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 455956, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
-  m_PrefabInternal: {fileID: 918963282}
 --- !u!1001 &1340982691
 Prefab:
   m_ObjectHideFlags: 0
@@ -391,6 +399,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
       propertyPath: shootWeapons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
+      propertyPath: playerWeapons.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 482610, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
@@ -443,19 +455,21 @@ Prefab:
     - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
       propertyPath: hitWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 11415838, guid: e895314ebc8ad924f988e75843484306,
+      objectReference: {fileID: 11411384, guid: 4c42d8784db311d4cab7844fec6e9319,
         type: 2}
     - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
       propertyPath: floor
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
       propertyPath: inGame
       value: 0
       objectReference: {fileID: 0}
-=======
->>>>>>> branch 'master' of https://github.com/ogilquin/bastard-and-ritual.git
+    - target: {fileID: 11414636, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
+      propertyPath: playerWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 11487324, guid: f617dbf6f03d7194aa62878f119248c3,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dbdd47d8c55558438ee061618c77765, type: 2}
   m_IsPrefabParent: 0

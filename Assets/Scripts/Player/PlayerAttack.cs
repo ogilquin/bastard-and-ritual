@@ -67,7 +67,7 @@ public class PlayerAttack : Attack {
 
     public void EquipDefault()
     {
-        EquipWeapon(GameManager.instance.hitWeapons[Random.Range(0, GameManager.instance.hitWeapons.Length)]);
+		EquipWeapon(GameManager.instance.playerWeapons[Random.Range(0, GameManager.instance.playerWeapons.Length)]);
         EquipSkill(GameManager.instance.skills[Random.Range(0, GameManager.instance.skills.Length)]);
     }
 
