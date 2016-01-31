@@ -23,10 +23,22 @@ public class Door : MonoBehaviour {
         if(closed == true)
             return;
             
-        TakeDamage other = collider.gameObject.GetComponent<TakeDamage>();
-        
-        linkTo.GetRoom().Enter(linkTo);
-        parent.Exit();
+        Player other = collider.gameObject.GetComponent<Player>();
+        if(other)
+        {
+            Vector2 movementDir = other.GetController().Move();
+            if(movementDir.magnitude > 0.1f)
+            {
+                Vector2 playerDir = (Vector2)transform.position - (Vector2)other.transform.position;
+                float angle = Vector2.Angle(playerDir, movementDir);
+                
+                if(Mathf.Abs(angle) < 45f)
+                {
+                    linkTo.GetRoom().Enter(linkTo);
+                    parent.Exit();
+                }
+            }
+        }
     }
     
     public void Close()

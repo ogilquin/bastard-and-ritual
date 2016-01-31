@@ -6,15 +6,8 @@ public class CameraRoom : MonoBehaviour {
 
     public float moveSpeed = 2f;
     public float zoomSpeed = 2f;
-    public float minZoom = 4f;
-    public float maxZoom = 10f;
-    public float minZoomDistance = 5f;
-    public float maxZoomDistance = 30f;
-
-    [Range(0f, 1f)]
-    public float zoom = 0.75f;
-    public Vector3 followOffset = Vector3.zero;
-    public List<GameObject> followTargets = new List<GameObject>();
+    
+    public Room room;
 
     // Shaking !
     private bool shaking;
@@ -30,26 +23,12 @@ public class CameraRoom : MonoBehaviour {
     }
 
     void LateUpdate()
-    {
-        int length = followTargets.Count;
-
-        if (length > 0)
+    {   
+        if(room)
         {
-            Vector2 c = new Vector2(0f, 0f);
-            float far = 0f;
-
-            foreach (GameObject u in followTargets)
-            {
-                Vector2 current = new Vector2(u.transform.position.x, u.transform.position.y);
-                c += current;
-                float d = Vector2.Distance(current, new Vector2(transform.position.x, transform.position.y));
-                if (d > far) far = d;
-            }
-
-            zoom = Mathf.Clamp01((far - minZoomDistance) / (maxZoomDistance - minZoomDistance));
-
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoom * (maxZoom - minZoom) + minZoom, zoomSpeed * Time.deltaTime);
-            transform.position = Vector3.Lerp(transform.position, new Vector3(c.x / length, c.y / length, transform.position.z) + followOffset, moveSpeed * Time.deltaTime);
+            Vector3 pos = new Vector3(room.transform.position.x, room.transform.position.y, room.transform.position.y - 500f);
+            transform.position = Vector3.Lerp(transform.position, pos, moveSpeed * Time.deltaTime);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, (float)room.height / 2f, zoomSpeed * Time.deltaTime);
         }
 
         if (shaking)
@@ -90,19 +69,8 @@ public class CameraRoom : MonoBehaviour {
         shaking = true;
     }
 
-    public void AddFollowTarget(GameObject target)
+    public void FocusRoom(Room room)
     {
-        if(!followTargets.Contains(target))
-            followTargets.Add(target);
-    }
-
-    public void RemoveFollowTarget(GameObject target)
-    {
-        followTargets.Remove(target);
-    }
-
-    public List<GameObject> GetFollowTarget()
-    {
-        return followTargets;
+        this.room = room;
     }
 }

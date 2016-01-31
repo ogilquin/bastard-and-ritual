@@ -197,7 +197,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198286726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e21f3de47a4419a4082a63f2ddc0dce7, type: 3}
   m_Name: 
@@ -206,7 +206,7 @@ MonoBehaviour:
   withKeyboard: 1
   goThrouhgSelect: 1
   goToPlay: 1
-  numPlayers: 2
+  numPlayers: 4
 --- !u!1 &258468625
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,11 +333,11 @@ Prefab:
       objectReference: {fileID: 71049803}
     - target: {fileID: 11477770, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
       propertyPath: minHittingMonsters
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11477770, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
       propertyPath: maxHittingMonster
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b30b96d8e3bf074e94202878965f8dd, type: 2}
@@ -489,7 +489,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11448190, guid: d36befb7f4a0c2549a8bc3644d01c4df, type: 2}
       propertyPath: maxPlayer
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d36befb7f4a0c2549a8bc3644d01c4df, type: 2}

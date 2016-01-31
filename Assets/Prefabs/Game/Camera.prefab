@@ -41,7 +41,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.25, g: 0.25, b: 0.25, a: 0.019607844}
+  m_BackGroundColor: {r: 0.043137256, g: 0.047058824, b: 0.06666667, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -52,7 +52,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -91,15 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b337e8105775140953c81c67e345e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 10
   zoomSpeed: 2
-  minZoom: 4
-  maxZoom: 10
-  minZoomDistance: 5
-  maxZoomDistance: 30
-  zoom: 0.75
-  followOffset: {x: 0, y: 0, z: 0}
-  followTargets: []
+  room: {fileID: 0}
 --- !u!124 &12415316
 Behaviour:
   m_ObjectHideFlags: 1
