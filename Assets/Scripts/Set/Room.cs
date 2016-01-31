@@ -114,8 +114,8 @@ public class Room : MonoBehaviour {
             transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
             
             if(wallTop){
-                wallTop.size = new Vector2((float) width, 1f);
-                wallTop.transform.localPosition = new Vector3(0f, ((float)height)/2f, 0f);
+                wallTop.size = new Vector2((float) width, 1.5f);
+                wallTop.transform.localPosition = new Vector3(0f, ((float)height)/2f - 0.25f, 0f);
             }
             if(wallBottom){
                 wallBottom.size = new Vector2((float) width, 1f);
