@@ -2,50 +2,50 @@
 using System.Collections;
 using UnitySteer2D.Behaviors;
 
-public class MonsterWeaponUsage : MonoBehaviour {
+public class MonsterShoot : MonoBehaviour {
 	private SteerForPursuit2D pursuitSteering;
 	private SteerForEvasion2D evasionSteering;
 
-	public GameObject currentTarget;
+	private Monster monster;
+	private MonsterAttack monsterAttack;
 
 	void Awake() {
-		pursuitSteering = (SteerForPursuit2D) gameObject.GetComponent<SteerForPursuit2D>();
-		evasionSteering = (SteerForEvasion2D) gameObject.GetComponent<SteerForEvasion2D>();
+		monster = GetComponent<Monster>();
+		monsterAttack = GetComponent<MonsterAttack>();
 	}
 
 	void Start () {
+		
+		pursuitSteering = (SteerForPursuit2D) monster.iaToFollow.GetComponent<SteerForPursuit2D>();
+		evasionSteering = (SteerForEvasion2D) monster.iaToFollow.GetComponent<SteerForEvasion2D>();
 	}
 	
 	void Update () {
 		bool pursuing = pursuitSteering != null ? pursuitSteering.cachedForce != Vector2.zero : false;
 		bool evading = evasionSteering != null ? evasionSteering.cachedForce != Vector2.zero : false;
 
-		if (currentTarget != null) {
+		if (monster.playerTarget != null) {
 			if (pursuing) {
-				Debug.Log("pursue");
-
-				if (false) {
-					Debug.Log("sword");
-				}
+				// pursuing
 			} else if (evading) {
-				Debug.Log("evading");
+				// evading
 			} else {
 				if (true) {
 					if (canSightThrough ()) {
-						Debug.Log("shooting");
+						monsterAttack.AttackWithWeapon();
 					} else {
-						Debug.Log("can't sight");
+						// can't sight
 					}
 				}
 			}
 			
 		} else {
-			Debug.Log("nothing to do");
+			// nothing to do
 		}
 	}
 
 	bool canSightThrough() {
-		RaycastHit2D [] raycastHits = Physics2D.RaycastAll(transform.position, currentTarget.transform.position);
+		RaycastHit2D [] raycastHits = Physics2D.RaycastAll(transform.position, monster.playerTarget.transform.position);
 		foreach (RaycastHit2D hit in raycastHits) {
 			ObstacleHeight obstacleHeight = (ObstacleHeight) hit.transform.gameObject.GetComponent<ObstacleHeight>();
 			if (obstacleHeight != null) {

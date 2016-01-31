@@ -42,20 +42,29 @@ public class MonsterAttack : Attack {
 			}
 
 			// Gestion des attaques
+			// only sword
 			if (monster.fightMean == Monster.FightMean.Hit && monster.playerTarget != null && ! monster.playerTarget.GetLife().IsDead() && CanAttack) {
 				float distanceToTarget = Vector2.Distance((Vector2) monster.transform.position, (Vector2) monster.playerTarget.transform.position);
 				if (distanceToTarget < distanceMinToAttackWithSword) {
-					if (Time.time - lastAttackTime >= durationBetweenTwoHit) {
-						weapon.Attack();
-						lastAttackTime = Time.time;
-					}
+					AttackWithWeapon();
 				}
 			}
 		}
 	}
 
+	public void AttackWithWeapon() {
+		if (Time.time - lastAttackTime >= durationBetweenTwoHit) {
+			weapon.Attack();
+			lastAttackTime = Time.time;
+		}
+	}
+
 	public void EquipDefault() {
-		EquipWeapon(GameManager.instance.weapons[Random.Range(0, GameManager.instance.weapons.Length)]);
+		if (monster.fightMean == Monster.FightMean.Hit) {
+			EquipWeapon(GameManager.instance.hitWeapons[Random.Range(0, GameManager.instance.hitWeapons.Length)]);
+		} else if (monster.fightMean == Monster.FightMean.Shoot) {
+			EquipWeapon(GameManager.instance.shootWeapons[Random.Range(0, GameManager.instance.shootWeapons.Length)]);
+		}
 	}
 
 	public override Life GetLife() {

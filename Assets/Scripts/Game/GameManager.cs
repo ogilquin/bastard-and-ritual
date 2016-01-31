@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,9 +21,8 @@ public class GameManager : MonoBehaviour
     public Player playerPrefab;
 	public Monster monsterSwordPrefab;
 	public Monster monsterCrossBowPrefab;
-    public Weapon[] weapons;
-    public Skill[] skills;
-    public PlayerSkin[] playerSkins;
+	public Weapon[] hitWeapons;
+	public Weapon[] shootWeapons;
     public int floor = 0;
     public bool inGame = false;
     public List<Player> players = new List<Player>();
