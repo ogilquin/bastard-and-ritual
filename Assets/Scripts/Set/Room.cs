@@ -53,7 +53,7 @@ public class Room : MonoBehaviour {
             return;
 
         CloseDoors();
-        Invoke("SpawnMonsters", 2f);
+        SpawnMonsters();
     }
 
 	void SpawnMonsters()

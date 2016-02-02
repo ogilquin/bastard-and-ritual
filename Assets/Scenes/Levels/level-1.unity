@@ -704,6 +704,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3cf5307a77df50408ff1acf481fa2c4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &722533177 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 185646, guid: d3cf5307a77df50408ff1acf481fa2c4, type: 2}
+  m_PrefabInternal: {fileID: 722533176}
+--- !u!114 &722533178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722533177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44785bcf45a150045809447d1c5988a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &866022884
 Prefab:
   m_ObjectHideFlags: 0
@@ -825,7 +840,7 @@ Prefab:
       objectReference: {fileID: 1204424302}
     - target: {fileID: 11431500, guid: 6914ee868fe53e046b1f1fda794fd6e5, type: 2}
       propertyPath: maxHittingMonster
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11434996, guid: 6914ee868fe53e046b1f1fda794fd6e5, type: 2}
       propertyPath: linkTo

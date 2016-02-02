@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e82dbaa8f0f23047b0b95c3059da789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 30
+  maxLife: 12
   bar: {fileID: 11433828}
 --- !u!114 &11433828
 MonoBehaviour:
@@ -1055,7 +1055,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxLife
-      value: 30
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString

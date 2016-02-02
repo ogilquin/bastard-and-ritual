@@ -97,4 +97,17 @@ public class GameManager : MonoBehaviour
         asyncOp.allowSceneActivation = true;
         yield return asyncOp;
     }
+    
+    public void Reset()
+    {
+        for(var i = GameManager.instance.players.Count-1; i>=0; ++i)
+        {
+            Destroy(GameManager.instance.players[i].gameObject);
+        }
+        
+        GameManager.instance.players.Clear();
+        inGame = false;
+        floor = 0;
+        SceneManager.LoadScene(0);
+    }
 }
