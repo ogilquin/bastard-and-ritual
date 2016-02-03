@@ -57,6 +57,11 @@ public class FloorManager : MonoBehaviour
             if(room.type == RoomType.Entrance){
                 Stair s = Instantiate(entrance, room.transform.position, Quaternion.identity) as Stair;
                 s.transform.parent = room.transform;
+                // no monsters in first level
+                room.maxHittingMonster = 0;
+                room.maxHittingMonster = 0;
+                room.minShootingMonsters = 0;
+                room.maxShootingMonsters = 0;
             } else if(room.type == RoomType.Exit){
                 Stair s = Instantiate(exit, room.transform.position, Quaternion.identity) as Stair;
                 s.transform.parent = room.transform;
