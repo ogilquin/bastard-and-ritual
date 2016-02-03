@@ -3,6 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public struct PlayerSkin{
     public Sprite ui;
+    public Sprite avantBrasDroit;
     public Sprite avantBrasGauche;
     public Sprite botteDroit;
     public Sprite botteGauche;

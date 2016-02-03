@@ -45,6 +45,8 @@ public class FloorManager : MonoBehaviour
             yield return null;
         }
         
+        rooms[rooms.Count-1].type = RoomType.Exit;
+        
         queue.Clear();
         
         // TODO: generate Objects / monsters difficulty
@@ -141,7 +143,6 @@ public class FloorManager : MonoBehaviour
 
     Room Spawner(RoomSpawn spawn){
         if(rooms.Count >= maxRooms){
-            rooms[rooms.Count-1].type = RoomType.Exit;
             return null;
         }
 
