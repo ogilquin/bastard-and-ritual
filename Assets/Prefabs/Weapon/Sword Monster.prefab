@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485838}
   - 114: {fileID: 11411384}
+  - 95: {fileID: 9545950}
   m_Layer: 0
   m_Name: Sword Monster
   m_TagString: Untagged
@@ -56,8 +57,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199150}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: -0.192, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.6, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 485838}
   m_RootOrder: 0
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.773472, y: -0.71220213, z: 0}
+  m_LocalPosition: {x: -20.02, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422890}
@@ -106,6 +107,23 @@ PolygonCollider2D:
       - {x: 0.8917463, y: -1.3810799}
       - {x: -0.011205196, y: -2.0012417}
       - {x: -0.95666325, y: -1.3262615}
+--- !u!95 &9545950
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173474}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5dd6742c480812242bd61395d3a0d319, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11411384
 MonoBehaviour:
   m_ObjectHideFlags: 1

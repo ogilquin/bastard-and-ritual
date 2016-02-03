@@ -114,10 +114,10 @@ RectTransform:
   - {fileID: 1243007607}
   m_Father: {fileID: 1946922604}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.149, y: 0}
+  m_AnchorMin: {x: 0.149, y: -0.5}
   m_AnchorMax: {x: 0.44841063, y: 0}
-  m_AnchoredPosition: {x: 0.9999924, y: -86.9}
-  m_SizeDelta: {x: 4, y: 189}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &55335311
 GameObject:
@@ -179,7 +179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &137527393
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,10 +208,10 @@ RectTransform:
   - {fileID: 1787735107}
   m_Father: {fileID: 1946922604}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.28668877, y: 0}
-  m_AnchoredPosition: {x: 8.5, y: -93}
-  m_SizeDelta: {x: 13, y: 189}
+  m_AnchorMin: {x: 0, y: -0.5}
+  m_AnchorMax: {x: 0.30183893, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.00000023841858}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &462450440
 GameObject:
@@ -463,10 +463,10 @@ RectTransform:
   - {fileID: 462450441}
   m_Father: {fileID: 1946922604}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0.44841063, y: 0}
-  m_AnchorMax: {x: 0.74700004, y: 0}
-  m_AnchoredPosition: {x: 1, y: -94.5}
-  m_SizeDelta: {x: 4, y: 189}
+  m_AnchorMin: {x: 0.44841063, y: -0.5}
+  m_AnchorMax: {x: 0.7522797, y: 0}
+  m_AnchoredPosition: {x: 0, y: 24.989992}
+  m_SizeDelta: {x: 0, y: 0.58001804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1243007606
 GameObject:
@@ -686,10 +686,10 @@ RectTransform:
   - {fileID: 1808803299}
   m_Father: {fileID: 1946922604}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0.29500002, y: 0}
-  m_AnchorMax: {x: 0.58962256, y: 0}
-  m_AnchoredPosition: {x: -2, y: -111}
-  m_SizeDelta: {x: 6, y: 189}
+  m_AnchorMin: {x: 0.29500002, y: -0.5}
+  m_AnchorMax: {x: 0.59727967, y: 0}
+  m_AnchoredPosition: {x: 0, y: -14.640001}
+  m_SizeDelta: {x: 0, y: -0.6200037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1787735106
 GameObject:
@@ -862,7 +862,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436526, guid: 97717b40433422346bcf958a381a8f34, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97717b40433422346bcf958a381a8f34, type: 2}

@@ -39,150 +39,15 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0.2
-        value: 35.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.9
-        value: 35.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (3)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.2
-        value: 37.812748
-        inSlope: 35
-        outSlope: 35
-        tangentMode: 10
-      - time: 0.4
-        value: 44.812748
-        inSlope: 10.5
-        outSlope: 10.5
-        tangentMode: 10
-      - time: 0.9
-        value: 37.812748
-        inSlope: -14.000001
-        outSlope: -14.000001
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (2)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.2
-        value: 42.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.9
-        value: 42.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.2
-        value: 43.812748
-        inSlope: 13.636363
-        outSlope: 13.636363
-        tangentMode: 10
-      - time: 0.56666666
-        value: 48.812748
-        inSlope: -0.68181896
-        outSlope: -0.68181896
-        tangentMode: 10
-      - time: 0.9
-        value: 43.812748
-        inSlope: -15.000001
-        outSlope: -15.000001
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (1)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
       - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 1
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: Players/Player (3)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: Players/Player (2)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 9
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 9
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
+    attribute: m_AnchorMax.y
     path: Players/Player
     classID: 224
     script: {fileID: 0}
@@ -190,19 +55,29 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 8
+        value: -0.25
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
+    attribute: m_AnchorMin.y
+    path: Players/Player
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMin.y
     path: Players/Player (1)
     classID: 224
     script: {fileID: 0}
@@ -210,50 +85,75 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -52.499996
-        outSlope: -52.499996
-        tangentMode: 10
-      - time: 0.26666668
-        value: -14
-        inSlope: -10.096151
-        outSlope: -10.096151
-        tangentMode: 10
-      - time: 0.7
-        value: 0
-        inSlope: 32.307693
-        outSlope: 32.307693
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (3)/Image
+    attribute: m_AnchorMax.y
+    path: Players/Player (1)
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 17.142857
-        outSlope: 17.142857
-        tangentMode: 10
-      - time: 0.46666667
-        value: 8
-        inSlope: -8.57143
-        outSlope: -8.57143
-        tangentMode: 10
-      - time: 0.7
-        value: 0
-        inSlope: -34.285717
-        outSlope: -34.285717
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player/Image
+    attribute: m_AnchorMax.y
+    path: Players/Player (2)
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMin.y
+    path: Players/Player (2)
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMax.y
+    path: Players/Player (3)
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMin.y
+    path: Players/Player (3)
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -264,68 +164,56 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 3806238009
-      attribute: 538195251
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
-    - path: 3388196602
-      attribute: 538195251
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
-    - path: 523435769
-      attribute: 538195251
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
-    - path: 1623153987
-      attribute: 538195251
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
     - path: 3932635806
       attribute: 304273561
       script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
       classID: 114
       customType: 0
       isPPtrCurve: 0
-    - path: 4224033912
-      attribute: 538195251
+    - path: 2292693119
+      attribute: 3600656472
       script: {fileID: 0}
       classID: 224
       customType: 0
       isPPtrCurve: 0
     - path: 2292693119
-      attribute: 538195251
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
-    - path: 4224033912
-      attribute: 1460864421
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
-    - path: 3806238009
-      attribute: 1460864421
-      script: {fileID: 0}
-      classID: 224
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2292693119
-      attribute: 1460864421
+      attribute: 193093493
       script: {fileID: 0}
       classID: 224
       customType: 0
       isPPtrCurve: 0
     - path: 3388196602
-      attribute: 1460864421
+      attribute: 193093493
+      script: {fileID: 0}
+      classID: 224
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3388196602
+      attribute: 3600656472
+      script: {fileID: 0}
+      classID: 224
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3806238009
+      attribute: 3600656472
+      script: {fileID: 0}
+      classID: 224
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3806238009
+      attribute: 193093493
+      script: {fileID: 0}
+      classID: 224
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4224033912
+      attribute: 3600656472
+      script: {fileID: 0}
+      classID: 224
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4224033912
+      attribute: 193093493
       script: {fileID: 0}
       classID: 224
       customType: 0
@@ -336,7 +224,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9
+    m_StopTime: 0.7
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -375,150 +263,15 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0.2
-        value: 35.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.9
-        value: 35.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (3)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.2
-        value: 37.812748
-        inSlope: 35
-        outSlope: 35
-        tangentMode: 10
-      - time: 0.4
-        value: 44.812748
-        inSlope: 10.5
-        outSlope: 10.5
-        tangentMode: 10
-      - time: 0.9
-        value: 37.812748
-        inSlope: -14.000001
-        outSlope: -14.000001
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (2)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.2
-        value: 42.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.9
-        value: 42.812748
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0.2
-        value: 43.812748
-        inSlope: 13.636363
-        outSlope: 13.636363
-        tangentMode: 10
-      - time: 0.56666666
-        value: 48.812748
-        inSlope: -0.68181896
-        outSlope: -0.68181896
-        tangentMode: 10
-      - time: 0.9
-        value: 43.812748
-        inSlope: -15.000001
-        outSlope: -15.000001
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (1)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
       - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 1
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: Players/Player (3)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: Players/Player (2)
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 9
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 9
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
+    attribute: m_AnchorMax.y
     path: Players/Player
     classID: 224
     script: {fileID: 0}
@@ -526,19 +279,29 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 0.7
-        value: 8
+        value: -0.25
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
+    attribute: m_AnchorMin.y
+    path: Players/Player
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMin.y
     path: Players/Player (1)
     classID: 224
     script: {fileID: 0}
@@ -546,50 +309,75 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -52.499996
-        outSlope: -52.499996
-        tangentMode: 10
-      - time: 0.26666668
-        value: -14
-        inSlope: -10.096151
-        outSlope: -10.096151
-        tangentMode: 10
-      - time: 0.7
-        value: 0
-        inSlope: 32.307693
-        outSlope: 32.307693
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player (3)/Image
+    attribute: m_AnchorMax.y
+    path: Players/Player (1)
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 17.142857
-        outSlope: 17.142857
-        tangentMode: 10
-      - time: 0.46666667
-        value: 8
-        inSlope: -8.57143
-        outSlope: -8.57143
-        tangentMode: 10
-      - time: 0.7
-        value: 0
-        inSlope: -34.285717
-        outSlope: -34.285717
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: Players/Player/Image
+    attribute: m_AnchorMax.y
+    path: Players/Player (2)
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMin.y
+    path: Players/Player (2)
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMax.y
+    path: Players/Player (3)
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_AnchorMin.y
+    path: Players/Player (3)
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []

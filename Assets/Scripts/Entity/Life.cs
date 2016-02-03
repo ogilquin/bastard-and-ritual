@@ -23,8 +23,8 @@ public class Life : MonoBehaviour {
     {
         life -= damage;
         
-        if(anim)
-            anim.SetTrigger("Hit");
+        //if(anim)
+        //    anim.SetTrigger("Hit");
 
         ShowLife();
 

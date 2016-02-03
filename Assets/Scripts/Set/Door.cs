@@ -5,7 +5,7 @@ public class Door : MonoBehaviour {
     
     public Door linkTo;
     public Transform spawnPoint;
-    private bool closed = false;
+    public bool closed = false;
     private Animator anim;
     private Room parent;
     
