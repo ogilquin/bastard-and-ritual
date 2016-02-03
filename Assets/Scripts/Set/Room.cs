@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Room : MonoBehaviour {
     public int height = 6;
     public int width = 6;
-    
+    public RoomType type = RoomType.Normal;
 	public int minHittingMonsters = 1;
     public int maxHittingMonster = 5;
 	public int minShootingMonsters = 0;
@@ -24,16 +24,34 @@ public class Room : MonoBehaviour {
     private List<Monster> monsters = new List<Monster>();
     private bool spawned = false;
     
+    public void Initialize()
+    {
+        doorTop.Initialize();
+        doorBottom.Initialize();
+        doorLeft.Initialize();
+        doorRight.Initialize();
+        
+        if(type != RoomType.Entrance){
+            Exit();
+        } else {
+            Enter(transform.position);
+        }
+    }
+    
     public void Enter(Door door)
+    {
+        Enter(door.spawnPoint.transform.position);
+    }
+    
+    public void Enter(Vector3 door)
     {
 		GameManager.instance.currentRoom = this;
 
-        Debug.Log("Enter room");
         gameObject.SetActive(true);
 
 		foreach (Player player in GameManager.instance.players) {
 			if (!player.GetLife().IsDead()) {
-				player.transform.position = door.spawnPoint.transform.position;
+				player.transform.position = door;
             }
         }
         

@@ -1017,10 +1017,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 15
   width: 26
+  type: 0
   minHittingMonsters: 0
-  maxHittingMonster: 0
+  maxHittingMonster: 6
   minShootingMonsters: 0
-  maxShootingMonsters: 0
+  maxShootingMonsters: 6
   wallTop: {fileID: 6151310}
   wallBottom: {fileID: 6105998}
   wallLeft: {fileID: 6146980}
@@ -1486,7 +1487,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: maxHittingMonster
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxShootingMonsters
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145342}

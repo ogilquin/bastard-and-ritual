@@ -228,39 +228,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 21235626, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6687437d21f9b7c4e99912c1482b251a,
-        type: 3}
-    - target: {fileID: 21235626, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21235626, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21235626, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 431382, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 431382, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6143392, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_Size.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6143392, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf9826beb1625b34491e3ac057632d9d, type: 2}
   m_IsPrefabParent: 0
@@ -335,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minPlayer: 1
   maxPlayer: 2
+  uiPlayers: []
 --- !u!4 &919864978
 Transform:
   m_ObjectHideFlags: 0

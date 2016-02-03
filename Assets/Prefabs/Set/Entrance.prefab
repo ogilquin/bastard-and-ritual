@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463446}
   - 114: {fileID: 11427042}
-  - 61: {fileID: 6108928}
+  - 114: {fileID: 11436300}
   m_Layer: 16
   m_Name: Entrance
   m_TagString: Untagged
@@ -86,20 +86,6 @@ Transform:
   - {fileID: 418514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6108928
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185646}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.5}
-  serializedVersion: 2
-  m_Size: {x: 3, y: 2}
 --- !u!114 &11427042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +99,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
   usable: 0
+--- !u!114 &11436300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44785bcf45a150045809447d1c5988a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21217868
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,7 +135,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: 0f2fa51c69c5b184c884f8d3210458f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

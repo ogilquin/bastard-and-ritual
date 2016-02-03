@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public string[] levels;
     public Player playerPrefab;
 	public Monster monsterSwordPrefab;
 	public Monster monsterCrossBowPrefab;
@@ -86,14 +85,13 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         ++floor;
-        if(levels.Length > 0)
-            StartCoroutine("LoadLevel");
+        StartCoroutine("LoadLevel", "level");
     }
     
-    IEnumerator LoadLevel() {
+    IEnumerator LoadLevel(string level) {
         Debug.LogWarning("ASYNC LOAD STARTED - " +
         "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
-        asyncOp = SceneManager.LoadSceneAsync(levels[Random.Range(0, levels.Length)]);
+        asyncOp = SceneManager.LoadSceneAsync(level);
         asyncOp.allowSceneActivation = true;
         yield return asyncOp;
     }

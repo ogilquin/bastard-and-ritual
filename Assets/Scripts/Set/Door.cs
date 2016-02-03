@@ -11,15 +11,11 @@ public class Door : MonoBehaviour {
     
     void Awake()
     {
-        if(linkTo == null)
-            gameObject.SetActive(false);
-
         anim = gameObject.GetComponent<Animator>();
         parent = gameObject.GetComponentInParent<Room>();
     }
     
     public void OnTriggerEnter2D(Collider2D collider) {
-        Debug.Log("Door hit");
         if(closed == true)
             return;
             
@@ -57,6 +53,12 @@ public class Door : MonoBehaviour {
     {
         closed = false;
         anim.SetBool("Closed", false);
+    }
+    
+    public void Initialize()
+    {
+        if(linkTo == null)
+            gameObject.SetActive(false);
     }
     
     public Room GetRoom()
