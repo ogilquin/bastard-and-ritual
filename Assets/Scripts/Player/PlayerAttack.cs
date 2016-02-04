@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerAttack : Attack {
     private Skill skill;
+    private Skin skin;
 
     private Vector2 direction = new Vector2(1f, 1f);
     private float rotation = 0f;
@@ -10,6 +11,7 @@ public class PlayerAttack : Attack {
 
     void Awake()
     {
+        skin = gameObject.GetComponentInChildren<Skin>();
         player = gameObject.GetComponent<Player>();
 		CanAttack = true;
     }
@@ -72,6 +74,14 @@ public class PlayerAttack : Attack {
         skill.transform.localRotation = new Quaternion();
         skill.owner = player;
     }
+    
+    public override void EquipWeapon(Weapon _weapon) {
+		base.EquipWeapon(_weapon);
+        WeaponSword w = weapon as WeaponSword;
+        Debug.Log(w);
+        if(skin && w.arm)
+            w.arm.sprite = skin.avantBrasDroit;
+	}
 
     public void EquipDefault()
     {

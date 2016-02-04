@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class Skin : MonoBehaviour {
+    public Sprite avantBrasDroit;
     public SpriteRenderer avantBrasGauche;
     public SpriteRenderer botteDroit;
     public SpriteRenderer botteGauche;
@@ -17,6 +18,7 @@ public class Skin : MonoBehaviour {
         if(GameManager.instance.playerSkins.Length > 0 && GameManager.instance.playerSkins.Length >= playerSkin)
         {
             PlayerSkin skin = GameManager.instance.playerSkins[playerSkin-1];
+            avantBrasDroit = skin.avantBrasDroit;
             avantBrasGauche.sprite = skin.avantBrasGauche;
             botteDroit.sprite = skin.botteDroit;
             botteGauche.sprite = skin.botteGauche;

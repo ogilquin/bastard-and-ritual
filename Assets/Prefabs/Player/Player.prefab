@@ -648,6 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2532522de5b614abe30b52b94cb65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avantBrasDroit: {fileID: 0}
   avantBrasGauche: {fileID: 21263074}
   botteDroit: {fileID: 21242668}
   botteGauche: {fileID: 21240366}

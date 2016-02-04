@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
     private Controller controller;
     private PlayerAttack playerAttack;
     private Life life;
+    private Sprite bras;
 
 	[HideInInspector]
 	public int numMonstersAttacking = 0;

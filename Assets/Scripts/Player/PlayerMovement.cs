@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private Vector2 input = Vector2.zero;
     private Vector2 dash = Vector2.zero;
+    private bool dashed = false;
 
 	[HideInInspector]
 	public bool CanMove = true;
@@ -57,13 +58,17 @@ public class PlayerMovement : MonoBehaviour {
 			
 			if (dash != Vector2.zero)
 			{
-                if(anim) anim.SetBool("Dash", true);
+                if(anim && !dashed) {
+                    anim.SetTrigger("Dash");
+                    dashed = true;
+                }
 				rigidbody2d.velocity += dash;
-				dash /= 2f;
+				dash *= 0.8f;
 				if (dash.magnitude < 0.01f)
 					dash = Vector2.zero;
 			} else {
                 if(anim) anim.SetBool("Dash", false);
+                dashed = false;
             }
 		}
     }

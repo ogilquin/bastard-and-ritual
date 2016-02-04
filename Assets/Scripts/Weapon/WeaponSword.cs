@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class WeaponSword : Weapon {
-
+    public SpriteRenderer arm;
     private bool attack = false;
 
     public override bool Attack()

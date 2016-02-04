@@ -53,12 +53,11 @@ public class FloorManager : MonoBehaviour
                 
         // Initialize rooms
         foreach(Room room in rooms){
-            room.Initialize();
             if(room.type == RoomType.Entrance){
                 Stair s = Instantiate(entrance, room.transform.position, Quaternion.identity) as Stair;
                 s.transform.parent = room.transform;
                 // no monsters in first level
-                room.maxHittingMonster = 0;
+                room.minHittingMonsters = 0;
                 room.maxHittingMonster = 0;
                 room.minShootingMonsters = 0;
                 room.maxShootingMonsters = 0;
@@ -66,6 +65,7 @@ public class FloorManager : MonoBehaviour
                 Stair s = Instantiate(exit, room.transform.position, Quaternion.identity) as Stair;
                 s.transform.parent = room.transform;
             }
+            room.Initialize();
         }
     }
     

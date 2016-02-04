@@ -17,7 +17,7 @@ public class Attack : MonoBehaviour {
 	void Update () {
 	}
 
-	public void EquipWeapon(Weapon _weapon) {
+	public virtual void EquipWeapon(Weapon _weapon) {
 		if (weapon)
 			Destroy(weapon.gameObject);
 
