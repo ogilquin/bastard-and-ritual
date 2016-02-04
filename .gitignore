@@ -61,3 +61,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 /drive/
+
+.vscode/
+.vscode/launch.json
