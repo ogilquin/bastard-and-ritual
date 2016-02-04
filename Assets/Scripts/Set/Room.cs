@@ -26,6 +26,8 @@ public class Room : MonoBehaviour {
     
     public void Initialize()
     {
+        OpenDoors();
+        
         doorTop.Initialize();
         doorBottom.Initialize();
         doorLeft.Initialize();
