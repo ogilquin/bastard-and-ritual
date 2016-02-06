@@ -1,10 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PositionZ : MonoBehaviour {
+    public float height = 0f;
     void Start()
     {
-        Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.y);
-        transform.position = newPos;
+        Place();
+    }
+    
+    void LateUpdate()
+    {
+        #if (UNITY_EDITOR)
+        Place();
+        #endif
+    }
+    
+    public void Place()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y - height);
     }
 }

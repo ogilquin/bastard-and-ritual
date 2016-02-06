@@ -134,8 +134,8 @@ public class Room : MonoBehaviour {
             transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
             
             if(wallTop){
-                wallTop.size = new Vector2((float) width, 1.5f);
-                wallTop.transform.localPosition = new Vector3(0f, ((float)height)/2f - 0.25f, 0f);
+                wallTop.size = new Vector2((float) width, 2f);
+                wallTop.transform.localPosition = new Vector3(0f, ((float)height)/2f, 0f);
             }
             if(wallBottom){
                 wallBottom.size = new Vector2((float) width, 1f);
@@ -151,16 +151,20 @@ public class Room : MonoBehaviour {
             }
             
             if(doorTop){
-                doorTop.transform.localPosition = new Vector3(0f, ((float)height)/2f - 1f, ((float)height)/2f - 1f);
+                doorTop.transform.localPosition = new Vector3(0f, ((float)height)/2f - 1f, 0f);
+                doorTop.gameObject.GetComponent<PositionZ>().Place();
             }
             if(doorBottom){
-                doorBottom.transform.localPosition = new Vector3(0f, (-(float)height)/2f + 0.5f, (-(float)height)/2f);
+                doorBottom.transform.localPosition = new Vector3(0f, (-(float)height)/2f - 0.2f, 0f);
+                doorBottom.gameObject.GetComponent<PositionZ>().Place();
             }
             if(doorLeft){
-                doorLeft.transform.localPosition = new Vector3((-(float)width)/2f + 0.5f, 0f, 0f);
+                doorLeft.transform.localPosition = new Vector3((-(float)width)/2f + 0.2f, 0f, 0f);
+                doorLeft.gameObject.GetComponent<PositionZ>().Place();
             }
             if(doorRight){
-                doorRight.transform.localPosition = new Vector3(((float)width)/2f - 0.5f, 0f, 0f);
+                doorRight.transform.localPosition = new Vector3(((float)width)/2f - 0.2f, 0f, 0f);
+                doorRight.gameObject.GetComponent<PositionZ>().Place();
             }
         #endif
     }

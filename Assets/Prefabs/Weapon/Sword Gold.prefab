@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413570}
   - 212: {fileID: 21291118}
+  - 114: {fileID: 11425220}
   m_Layer: 0
   m_Name: GO_ARME
   m_TagString: Untagged
@@ -58,6 +59,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 420980}
   - 212: {fileID: 21260858}
+  - 114: {fileID: 11484344}
   m_Layer: 0
   m_Name: GO_AVANT_BRAS_DROIT
   m_TagString: Untagged
@@ -183,6 +185,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11425220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd389f7b4cc2074797fc7ed44aa570b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowCastingMode: 2
+  receiveShadows: 0
+--- !u!114 &11484344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd389f7b4cc2074797fc7ed44aa570b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowCastingMode: 2
+  receiveShadows: 0
 --- !u!114 &11487324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +251,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: f5fa6dd06d35a8946ad4b8153d3be6a4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -253,7 +281,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: f5fa6dd06d35a8946ad4b8153d3be6a4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

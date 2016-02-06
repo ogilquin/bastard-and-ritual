@@ -5,21 +5,18 @@ public class FireTrapWeapon : Weapon {
 	public GameObject [] itemsOn;
 	public GameObject [] itemsOff;
 
-	public Collider2D collider;
+	public Collider2D collider2d;
 
 	public float effectDuration = 1f;
 	public float collideAfterDuration = .3f;
 
-	void Awake() {
+	public override void Awake() {
 		base.Awake();
-		collider.enabled = false;
+		collider2d.enabled = false;
 	}
 
-	void Start () {
+	public override void Start () {
 		ready = true;
-	}
-	
-	void Update () {
 	}
 
 	public override bool Attack() {
@@ -49,7 +46,7 @@ public class FireTrapWeapon : Weapon {
 	}
 
 	void EnableCollider() {
-		collider.enabled = true;
+		collider2d.enabled = true;
 	}
 
 	void DisableAttack() {
@@ -61,7 +58,7 @@ public class FireTrapWeapon : Weapon {
 			itemOn.SetActive(false);
 		}
 
-		collider.enabled = false;
+		collider2d.enabled = false;
 
 		ready = true;
 	}

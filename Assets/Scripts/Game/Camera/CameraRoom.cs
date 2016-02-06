@@ -27,7 +27,7 @@ public class CameraRoom : MonoBehaviour {
     {   
         if(room)
         {
-            Vector3 pos = new Vector3(room.transform.position.x, room.transform.position.y, room.transform.position.y - 500f);
+            Vector3 pos = new Vector3(room.transform.position.x, room.transform.position.y, room.transform.position.y - 400f);
             transform.position = Vector3.Lerp(transform.position, pos, moveSpeed * Time.deltaTime);
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, (float)room.height / 2f + 0.5f, zoomSpeed * Time.deltaTime);
         }

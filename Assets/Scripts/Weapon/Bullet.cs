@@ -5,8 +5,6 @@ public class Bullet : MonoBehaviour {
 	protected Rigidbody2D rigidbody2d;
 	protected Weapon weapon;
 
-	private bool isDestroyed = false;
-
 	public virtual void Awake()
 	{
 		rigidbody2d = gameObject.GetComponent<Rigidbody2D>();

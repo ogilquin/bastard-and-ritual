@@ -80,7 +80,6 @@ public class PlayerSelectManager : MonoBehaviour {
            
 		int traitorIndex = Random.Range(0, players.Count);
 
-        Debug.Log("Launch game");
         start = true;
 		GameManager.instance.LaunchGame(players.ToArray(), traitorIndex);
         Destroy(gameObject);

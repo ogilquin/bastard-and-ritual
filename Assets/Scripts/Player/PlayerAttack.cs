@@ -78,7 +78,6 @@ public class PlayerAttack : Attack {
     public override void EquipWeapon(Weapon _weapon) {
 		base.EquipWeapon(_weapon);
         WeaponSword w = weapon as WeaponSword;
-        Debug.Log(w);
         if(skin && w.arm)
             w.arm.sprite = skin.avantBrasDroit;
 	}
